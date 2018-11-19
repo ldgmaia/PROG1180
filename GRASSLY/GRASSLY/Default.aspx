@@ -24,6 +24,8 @@
 
 <body>
    
+    <form id="form1" runat="server">
+   
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="#">Logo</a>
@@ -55,7 +57,6 @@
 <div class="container">
   <h2 class="display-3 text-center" >Sales</h2> <!-- (Use for Titles) -->
 <br />
-<form>
   <div class="form-group row">
     <label for="email" class="col-sm-3 col-form-label">Email address:</label>   
     <div class="col-sm-9">
@@ -169,7 +170,6 @@
 </div>
 
      <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 <br /><br />
 <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
@@ -274,8 +274,25 @@
         </tbody>
 
     </table>
-</div>
+
+    <br />
+        <asp:GridView ID="GridView1" class="table table-striped table-bordered" style="width:100%" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="ObjectDataSource1">
+            <Columns>
+                <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                <asp:BoundField DataField="custFirst" HeaderText="custFirst" SortExpression="custFirst" />
+                <asp:BoundField DataField="custLast" HeaderText="custLast" SortExpression="custLast" />
+                <asp:BoundField DataField="custPhone" HeaderText="custPhone" SortExpression="custPhone" />
+                <asp:BoundField DataField="custAddress" HeaderText="custAddress" SortExpression="custAddress" />
+                <asp:BoundField DataField="custCity" HeaderText="custCity" SortExpression="custCity" />
+                <asp:BoundField DataField="custPostal" HeaderText="custPostal" SortExpression="custPostal" />
+                <asp:BoundField DataField="custEmail" HeaderText="custEmail" SortExpression="custEmail" />
+            </Columns>
+        </asp:GridView>
+        <br />
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.customerTableAdapter"></asp:ObjectDataSource>
     <br /><br />
+</div>
+        
 
 <footer class="page-footer font-small bg-dark ">
   <!-- Copyright -->
@@ -283,6 +300,8 @@
   </div>
 
 </footer>
+   
+    </form>
    
 </body>
 </html>
