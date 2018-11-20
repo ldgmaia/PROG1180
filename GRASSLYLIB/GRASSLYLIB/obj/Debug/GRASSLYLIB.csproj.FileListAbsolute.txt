@@ -1,0 +1,8 @@
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\bin\Debug\Emmas.mdf
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\bin\Debug\Emmas_log.ldf
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.dll.config
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.dll
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.pdb
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csproj.CoreCompileInputs.cache
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.dll
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.pdb
