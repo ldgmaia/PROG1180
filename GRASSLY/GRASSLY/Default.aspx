@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
   <title>Bootstrap Template</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
@@ -52,7 +52,7 @@
     </li>
   </ul>
 </nav>
-<br>
+<br />
   
 <div class="container">
   <h2 class="display-3 text-center" >Sales</h2> <!-- (Use for Titles) -->
@@ -60,14 +60,14 @@
   <div class="form-group row">
     <label for="email" class="col-sm-3 col-form-label">Email address:</label>   
     <div class="col-sm-9">
-       <input type="email" class="form-control" id="email">
+       <input type="email" class="form-control" id="email" />
     </div>
   </div>
 
   <div class="form-group row">
     <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
     <div class="col-sm-9">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password" />
     </div>
   </div>
 
@@ -94,17 +94,17 @@
        <label   class="col-sm-3 col-form-label">Select Checkbox:</label>
     <div class="form-check-inline">
       <label class="form-check-label" for="check1">
-        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>Option 1
+        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked />Option 1
       </label>
     </div>
     <div class="form-check-inline">
       <label class="form-check-label" for="check2">
-        <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">Option 2
+        <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something" />Option 2
       </label>
     </div>
     <div class="form-check-inline">
       <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" disabled>Option 3
+        <input type="checkbox" class="form-check-input" disabled />Option 3
       </label>
     </div>
 </div>
@@ -112,17 +112,17 @@
      <label   class="col-sm-3 col-form-label">Select a Radio:</label>
     <div class="form-check-inline">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optradio">Option 1
+        <input type="radio" class="form-check-input" name="optradio" />Option 1
       </label>
     </div>
     <div class="form-check-inline">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optradio">Option 2
+        <input type="radio" class="form-check-input" name="optradio" />Option 2
       </label>
     </div>
     <div class="form-check-inline disabled">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optradio" disabled>Option 3
+        <input type="radio" class="form-check-input" name="optradio" disabled />Option 3
       </label>
     </div>
 </div>
@@ -130,42 +130,42 @@
 <div class="form-group row">
   <label for="example-number-input" class="col-sm-3 col-form-label">Number</label>
   <div class="col-sm-9">
-    <input class="form-control" type="number" value="42" id="example-number-input">
+    <input class="form-control" type="number" value="42" id="example-number-input" />
   </div>
 </div>
 
 <div class="form-group row">
   <label for="example-datetime-local-input" class="col-sm-3 col-form-label">Date and time</label>
   <div class="col-sm-9">
-    <input class="form-control" type="datetime-local" value="2018-08-19T13:45:00" id="example-datetime-local-input">
+    <input class="form-control" type="datetime-local" value="2018-08-19T13:45:00" id="example-datetime-local-input" />
   </div>
 </div>
 
 <div class="form-group row">
   <label for="example-date-input" class="col-sm-3 col-form-label">Date</label>
   <div class="col-sm-9">
-    <input class="form-control" type="date" value="2018-08-19" id="example-date-input">
+    <input class="form-control" type="date" value="2018-08-19" id="example-date-input" />
   </div>
 </div>
 
 <div class="form-group row">
   <label for="example-month-input" class="col-sm-3 col-form-label">Month</label>
   <div class="col-sm-9">
-    <input class="form-control" type="month" value="2018-08" id="example-month-input">
+    <input class="form-control" type="month" value="2018-08" id="example-month-input" />
   </div>
 </div>
 
 <div class="form-group row">
   <label for="example-week-input" class="col-sm-3 col-form-label">Week</label>
   <div class="col-sm-9">
-    <input class="form-control" type="week" value="2018-W33" id="example-week-input">
+    <input class="form-control" type="week" value="2018-W33" id="example-week-input" />
   </div>
 </div>
 
 <div class="form-group row">
   <label for="example-time-input" class="col-sm-3 col-form-label">Time</label>
   <div class="col-sm-9">
-    <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+    <input class="form-control" type="time" value="13:45:00" id="example-time-input" />
   </div>
 </div>
 
