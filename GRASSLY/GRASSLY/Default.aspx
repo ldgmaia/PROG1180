@@ -32,30 +32,52 @@
 
   <!-- Links -->
   <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 2</a>
-    </li>
-
+    
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Dropdown link
+        Sales
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
+        <a class="dropdown-item" href="#">Customer</a>
+        <a class="dropdown-item" href="#">Place Order</a>
+          <a class="dropdown-item" href="#">Repair Request</a>
+        <a class="dropdown-item" href="#">Search Order</a>
       </div>
+    </li>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Management
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Staff</a>
+        <a class="dropdown-item" href="#">Report</a>
+          <a class="dropdown-item" href="#"> </a>
+              
+              <ul>
+                  <li>Yearly (0.02%)</li>
+                  <li>Weekly</li>
+                  <li>Warranty</li>
+              </ul>
+         
+      </div>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#">Repair</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Inventory</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Welcome </asp:Label><%=Request.QueryString["User"] %></a>
+      <%--<asp:Label ID="lblWelcome" runat="server" Text="Welcome "></asp:Label><%=Request.QueryString["User"] %>--%>
     </li>
   </ul>
 </nav>
 <br />
   
 <div class="container">
-  <h2 class="display-3 text-center" >Sales</h2> <!-- (Use for Titles) -->
+  <h2 class="display-3 text-center" style="font-weight: bold" >Sales</h2> <!-- (Use for Titles) -->
 <br />
   <div class="form-group row">
     <label for="email" class="col-sm-3 col-form-label">Email address:</label>   

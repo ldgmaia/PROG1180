@@ -34,7 +34,7 @@ namespace GRASSLY
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                 var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                 authenticationManager.SignIn(userIdentity);
-                Response.Redirect("~/Welcome.aspx?User=" + txtUser.Text);
+                Response.Redirect("~/Default.aspx?User=" + txtUser.Text);
             }
         }
 
