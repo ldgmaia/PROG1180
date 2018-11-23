@@ -6,3 +6,12 @@ C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.pdb
 C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csproj.CoreCompileInputs.cache
 C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.dll
 C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.pdb
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\Emmas.mdf
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\Emmas_log.ldf
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.dll.config
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.dll
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.pdb
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csprojAssemblyReference.cache
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csproj.CoreCompileInputs.cache
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.dll
+C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.pdb

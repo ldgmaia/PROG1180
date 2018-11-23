@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmmasDataSet.cs">
+      <DependentUpon>EmmasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmmasDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

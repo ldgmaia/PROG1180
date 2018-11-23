@@ -115,21 +115,38 @@
     <Content Include="App_Data\Users_log.ldf">
       <DependentUpon>Users.mdf</DependentUpon>
     </Content>
+    <Content Include="CustomerCreate.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="EmployeeCreate.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="Management.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
     <Content Include="Welcome.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerCreate.aspx.cs">
+      <DependentUpon>CustomerCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerCreate.aspx.designer.cs">
+      <DependentUpon>CustomerCreate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeCreate.aspx.cs">
+      <DependentUpon>EmployeeCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeCreate.aspx.designer.cs">
+      <DependentUpon>EmployeeCreate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,6 +157,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
