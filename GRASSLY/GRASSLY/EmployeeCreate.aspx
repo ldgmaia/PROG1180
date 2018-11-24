@@ -17,6 +17,7 @@
         <asp:TextBox ID="txtLast" runat="server"></asp:TextBox>
         <br />
         <br />
+        Position:
         <asp:DropDownList ID="ddlPosition" runat="server" DataSourceID="dsPosCreate" DataTextField="posName" DataValueField="id">
         </asp:DropDownList>
         <br />
