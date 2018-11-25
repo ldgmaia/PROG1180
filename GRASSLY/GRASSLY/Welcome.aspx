@@ -22,29 +22,30 @@
 </head>
 <body>
      <form id="form1" runat="server">
-    <div style="height: 126px">
-    
-        <table style="width:100%;">
-            <tr>
-                <td>
-                    <asp:Label ID="lblWelcome" runat="server" Text="Welcome "></asp:Label><%=Request.QueryString["User"] %>
-                </td>
-                <td style="text-align: right">
-                    <asp:LinkButton ID="lnkLogout" runat="server" Visible="True" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
-                    <asp:LinkButton ID="lnkLogin" runat="server" Visible="True">Login</asp:LinkButton>
-                </td>
-            </tr>
-        </table>
-    
-        <br />
-        <asp:Panel ID="Panel1" runat="server">
-        </asp:Panel>
-        <asp:Panel ID="pnlContent" runat="server" Visible="False">
-            &nbsp;<asp:LinkButton ID="lnkSales" runat="server">Sales</asp:LinkButton>
-            <br />
-        </asp:Panel>
-    
-    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Logo</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item text-right">
+      <a class="nav-link" href="Login.aspx">Login</a>
+    </li>
+  </ul>
+</nav>
+<br />
+<div class="container">
+  <h2 class="display-3 text-center" style="font-weight: bold" >Welcome to the Emma's Store!</h2> <!-- (Use for Titles) -->
+   <br />
+    <br />
+    <p>Please, login to use the system!</p>
+<br />
+</div>
+<footer class="page-footer font-small bg-dark ">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center p-3 text-white">© 2018 Copyright: BRIC
+  </div>
+</footer>
     </form>
 </body>
 </html>

@@ -19,35 +19,38 @@
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<style type="text/css">
-        .auto-style1 {
-            text-align: right;
-            width: 156px;
-        }
-        .auto-style2 {
-            font-size: xx-large;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-        <span class="auto-style2">Login</span><br />
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Logo</a>
+
+  <!-- Links -->
+ <%-- <ul class="navbar-nav">
+    <li class="nav-item text-right">
+      <a class="nav-link" href="Login.aspx">Login</a>
+    </li>
+  </ul>--%>
+</nav>
+    <div class="container">
+         <h2 class="display-3 text-center" style="font-weight: bold" >Login</h2> <!-- (Use for Titles) -->
         <br />
-        <table style="width: 42%;">
+        <table id="login" class="table table-striped table-bordered" style="width:100%">
+            <tbody>
             <tr>
-                <td class="auto-style1">Username:</td>
+                <td>Username:</td>
                 <td>
                     <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">Password:</td>
+                <td>Password:</td>
                 <td>
                     <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
+            </tbody>
         </table>
         <br />
         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
@@ -61,6 +64,12 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPass" ErrorMessage="Password is required"></asp:RequiredFieldValidator>
     
     </div>
+  <footer class="page-footer font-small bg-dark ">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center p-3 text-white">© 2018 Copyright: BRIC
+  </div>
+
+</footer>
     </form>
 </body>
 </html>

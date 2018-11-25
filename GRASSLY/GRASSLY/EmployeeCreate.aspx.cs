@@ -35,7 +35,7 @@ namespace GRASSLY
                 GRASSLYLIB.EmmasDataSetTableAdapters.EmployeeCRUDTableAdapter daEmp = new GRASSLYLIB.EmmasDataSetTableAdapters.EmployeeCRUDTableAdapter();
                 daEmp.Update(dsEmp.EmployeeCRUD);
                 dsEmp.AcceptChanges();
-                Response.Redirect("~/Management.aspx");
+                Response.Redirect("~/Employee.aspx");
             }
             catch
             {

@@ -115,11 +115,14 @@
     <Content Include="App_Data\Users_log.ldf">
       <DependentUpon>Users.mdf</DependentUpon>
     </Content>
+    <Content Include="Customer.aspx" />
     <Content Include="CustomerCreate.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Employee.aspx" />
     <Content Include="EmployeeCreate.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="Main.aspx" />
     <Content Include="Management.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="test.aspx" />
@@ -127,6 +130,13 @@
     <Content Include="Welcome.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerCreate.aspx.cs">
       <DependentUpon>CustomerCreate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,6 +150,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeCreate.aspx.cs">
       <DependentUpon>EmployeeCreate.aspx</DependentUpon>
@@ -157,6 +174,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management.aspx.cs">
       <DependentUpon>Management.aspx</DependentUpon>

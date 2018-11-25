@@ -39,10 +39,10 @@
         Sales
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Customer</a>
+        <a class="dropdown-item" href="Customer.aspx">Customer</a>
         <a class="dropdown-item" href="#">Place Order</a>
           <a class="dropdown-item" href="#">Repair Request</a>
-        <a class="dropdown-item" href="#">Search Order</a>
+        <a class="dropdown-item" href="Management.aspx">Search Order</a>
       </div>
     </li>
       <li class="nav-item dropdown">
@@ -50,7 +50,7 @@
         Management
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Staff</a>
+        <a class="dropdown-item" href="Employee.aspx">Staff</a>
         <a class="dropdown-item" href="#">Report</a>
           <a class="dropdown-item" href="#"> </a>
               

@@ -13,12 +13,13 @@ namespace GRASSLY
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!User.Identity.IsAuthenticated)
+                Response.Redirect("~/LogIn.aspx");
         }
 
         protected void DetailsView1_ItemCommand(object sender, DetailsViewCommandEventArgs e)
         {
-            Response.Redirect("~/Management.aspx");
+            Response.Redirect("~/Customer.aspx");
         }
 
         protected void btnCreateCust_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace GRASSLY
                 GRASSLYLIB.EmmasDataSetTableAdapters.CustomerCRUDTableAdapter daCust = new GRASSLYLIB.EmmasDataSetTableAdapters.CustomerCRUDTableAdapter();
                 daCust.Update(dsCust.CustomerCRUD);
                 dsCust.AcceptChanges();
-                Response.Redirect("~/Management.aspx");
+                Response.Redirect("~/Customer.aspx");
             }
             catch
             {
