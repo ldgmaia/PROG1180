@@ -127,6 +127,7 @@
     <Content Include="Management.aspx" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="StickyFooter.css" />
     <Content Include="Styles.css" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />

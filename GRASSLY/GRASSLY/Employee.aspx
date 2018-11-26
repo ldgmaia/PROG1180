@@ -4,17 +4,26 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Bootstrap Template</title>
+  <title>Employee </title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" />
+   <link rel="stylesheet" type="text/css" href="StickyFooter.css">  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#GridView1').DataTable({});     
+    } );
+</script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -87,7 +96,8 @@
                 <p class="display-3" style="font-weight: bold" >&nbsp;</p>
             </div>
             <div>
-            <asp:GridView ID="GridView1" class="table table-striped table-bordered" style="width:100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsEmployees">
+            <asp:GridView ID="GridView1" class="table table-striped table-bordered" style="width:100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsEmployees" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                     <asp:BoundField DataField="custFirst" HeaderText="First Name" SortExpression="custFirst" />
@@ -107,10 +117,20 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
             </div>
             <br />
-&nbsp;<asp:Button ID="btnCreateEmp" runat="server" OnClick="btnCreateEmp_Click" Text="Create Employee" />
+&nbsp;<asp:Button ID="btnCreateEmp" runat="server" class="btn btn-primary" OnClick="btnCreateEmp_Click" Text="Create Employee" />
             <br />
             <br />
             <asp:SqlDataSource ID="dsEmployees" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [customer] WHERE [id] = @original_id AND (([custFirst] = @original_custFirst) OR ([custFirst] IS NULL AND @original_custFirst IS NULL)) AND (([custLast] = @original_custLast) OR ([custLast] IS NULL AND @original_custLast IS NULL)) AND (([custPhone] = @original_custPhone) OR ([custPhone] IS NULL AND @original_custPhone IS NULL)) AND (([custAddress] = @original_custAddress) OR ([custAddress] IS NULL AND @original_custAddress IS NULL)) AND (([custCity] = @original_custCity) OR ([custCity] IS NULL AND @original_custCity IS NULL)) AND (([custPostal] = @original_custPostal) OR ([custPostal] IS NULL AND @original_custPostal IS NULL)) AND (([custEmail] = @original_custEmail) OR ([custEmail] IS NULL AND @original_custEmail IS NULL))" InsertCommand="INSERT INTO [customer] ([custFirst], [custLast], [custPhone], [custAddress], [custCity], [custPostal], [custEmail]) VALUES (@custFirst, @custLast, @custPhone, @custAddress, @custCity, @custPostal, @custEmail)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT customer.id, customer.custFirst, customer.custLast, customer.custPhone, customer.custAddress, customer.custCity, customer.custPostal, customer.custEmail, position.posName FROM customer INNER JOIN position ON customer.id = position.id ORDER BY customer.custFirst, customer.custLast" UpdateCommand="UPDATE [customer] SET [custFirst] = @custFirst, [custLast] = @custLast, [custPhone] = @custPhone, [custAddress] = @custAddress, [custCity] = @custCity, [custPostal] = @custPostal, [custEmail] = @custEmail WHERE [id] = @original_id AND (([custFirst] = @original_custFirst) OR ([custFirst] IS NULL AND @original_custFirst IS NULL)) AND (([custLast] = @original_custLast) OR ([custLast] IS NULL AND @original_custLast IS NULL)) AND (([custPhone] = @original_custPhone) OR ([custPhone] IS NULL AND @original_custPhone IS NULL)) AND (([custAddress] = @original_custAddress) OR ([custAddress] IS NULL AND @original_custAddress IS NULL)) AND (([custCity] = @original_custCity) OR ([custCity] IS NULL AND @original_custCity IS NULL)) AND (([custPostal] = @original_custPostal) OR ([custPostal] IS NULL AND @original_custPostal IS NULL)) AND (([custEmail] = @original_custEmail) OR ([custEmail] IS NULL AND @original_custEmail IS NULL))">
@@ -181,11 +201,11 @@
         </div>
 
 
-    <footer class="page-footer font-small bg-dark ">
-  <!-- Copyright -->
-  <div class="footer-copyright text-center p-3 text-white">© 2018 Copyright: BRIC
-  </div>
-</footer>
+    <footer class="footer page-footer font-small bg-dark">
+      <div class="container text-center text-white">
+        <span class= "footer-copyright text-center p-3">© 2018 Copyright: BRIC</span>
+      </div>
+    </footer>
     </form>
 </body>
 </html>

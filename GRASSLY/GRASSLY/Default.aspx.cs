@@ -12,7 +12,7 @@ namespace GRASSLY
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
     }
 }

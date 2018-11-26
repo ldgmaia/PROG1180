@@ -11,7 +11,7 @@ namespace GRASSLY
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
 
         protected void btnCreateEmp_Click(object sender, EventArgs e)

@@ -11,8 +11,10 @@ namespace GRASSLY
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            GridView2.HeaderRow.TableSection = TableRowSection.TableHeader;
             if (!User.Identity.IsAuthenticated)
                 Response.Redirect("~/LogIn.aspx");
+
         }
 
         protected void btnCustCreate_Click(object sender, EventArgs e)
