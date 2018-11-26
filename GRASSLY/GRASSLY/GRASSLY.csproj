@@ -127,6 +127,9 @@
     <Content Include="Management.aspx" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="ReportAnnual.aspx" />
+    <Content Include="ReportWarranty.aspx" />
+    <Content Include="ReportWeekly.aspx" />
     <Content Include="StickyFooter.css" />
     <Content Include="Styles.css" />
     <Content Include="test.aspx" />
@@ -214,6 +217,27 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAnnual.aspx.cs">
+      <DependentUpon>ReportAnnual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportAnnual.aspx.designer.cs">
+      <DependentUpon>ReportAnnual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWarranty.aspx.cs">
+      <DependentUpon>ReportWarranty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportWarranty.aspx.designer.cs">
+      <DependentUpon>ReportWarranty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWeekly.aspx.cs">
+      <DependentUpon>ReportWeekly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportWeekly.aspx.designer.cs">
+      <DependentUpon>ReportWeekly.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="test.aspx.cs">

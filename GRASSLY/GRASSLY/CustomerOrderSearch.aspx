@@ -69,9 +69,9 @@
           <div class="dropdown-divider"></div>
         <a class="dropdown-item disabled" >Reports <i class="fas fa-book"></i></a>
           <a class="dropdown-item" href="#"> </a>          
-                 <a class="dropdown-item" href="#">Yearly (0.02%) Report</a>
-                  <a class="dropdown-item" href="#">Weekly Report</a>
-                 <a class="dropdown-item" href="#">Warranty Report</a>        
+                 <a class="dropdown-item" href="ReportAnnual.aspx">Yearly (0.02%) Report</a>
+                  <a class="dropdown-item" href="ReportWeekly.aspx">Weekly Report</a>
+                 <a class="dropdown-item" href="ReportWarranty.aspx">Warranty Report</a>            
       </div>
     </li>
       <li class="nav-item">
