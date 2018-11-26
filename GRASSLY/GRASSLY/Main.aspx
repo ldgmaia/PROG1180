@@ -36,9 +36,9 @@
               </a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="Customer.aspx">Customer</a>
-                <a class="dropdown-item" href="#">Place Order</a>
+                <a class="dropdown-item" href="PlaceOrder.aspx">Place Order</a>
                   <a class="dropdown-item" href="#">Repair Request</a>
-                <a class="dropdown-item" href="Management.aspx">Search Order</a>
+                <a class="dropdown-item" href="CustomerOrderSearch.aspx">Search Order</a>
               </div>
             </li>
       <li class="nav-item dropdown">
