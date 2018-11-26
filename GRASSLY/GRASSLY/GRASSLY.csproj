@@ -125,11 +125,12 @@
     <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Management.aspx" />
+    <Content Include="NavBar.aspx" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Register.aspx" />
-    <Content Include="ReportAnnual.aspx" />
-    <Content Include="ReportWarranty.aspx" />
-    <Content Include="ReportWeekly.aspx" />
+    <Content Include="Reports\ReportAnnual.aspx" />
+    <Content Include="Reports\ReportWarranty.aspx" />
+    <Content Include="Reports\ReportWeekly.aspx" />
     <Content Include="StickyFooter.css" />
     <Content Include="Styles.css" />
     <Content Include="test.aspx" />
@@ -203,6 +204,13 @@
     <Compile Include="Management.aspx.designer.cs">
       <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NavBar.aspx.cs">
+      <DependentUpon>NavBar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NavBar.aspx.designer.cs">
+      <DependentUpon>NavBar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PlaceOrder.aspx.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -218,25 +226,25 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReportAnnual.aspx.cs">
+    <Compile Include="Reports\ReportAnnual.aspx.cs">
       <DependentUpon>ReportAnnual.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReportAnnual.aspx.designer.cs">
+    <Compile Include="Reports\ReportAnnual.aspx.designer.cs">
       <DependentUpon>ReportAnnual.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReportWarranty.aspx.cs">
+    <Compile Include="Reports\ReportWarranty.aspx.cs">
       <DependentUpon>ReportWarranty.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReportWarranty.aspx.designer.cs">
+    <Compile Include="Reports\ReportWarranty.aspx.designer.cs">
       <DependentUpon>ReportWarranty.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReportWeekly.aspx.cs">
+    <Compile Include="Reports\ReportWeekly.aspx.cs">
       <DependentUpon>ReportWeekly.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReportWeekly.aspx.designer.cs">
+    <Compile Include="Reports\ReportWeekly.aspx.designer.cs">
       <DependentUpon>ReportWeekly.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
