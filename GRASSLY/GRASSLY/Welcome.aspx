@@ -19,20 +19,33 @@
    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
      <form id="form1" runat="server">
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#">Logo</a>
-
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item text-right">
-      <a class="nav-link" href="Login.aspx">Login</a>
-    </li>
-  </ul>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="mx-auto order-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"> <span class="font-italic">Emma's</span></a>
+            </li>
+        </ul>
+    </div>
+    <i class="fas fa-sign-in"></i>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="Login.aspx"><i class="fa fa-sign-in-alt"></i> Login</a>
+            </li>
+        </ul>
+    </div>
 </nav>
+
 <br />
 <div class="container">
   <h2 class="display-3 text-center" style="font-weight: bold" >Welcome to the Emma's Store!</h2> <!-- (Use for Titles) -->
@@ -41,6 +54,7 @@
     <p>Please, login to use the system!</p>
 <br />
 </div>
+
 <footer class="page-footer font-small bg-dark ">
   <!-- Copyright -->
   <div class="footer-copyright text-center p-3 text-white">© 2018 Copyright: BRIC
