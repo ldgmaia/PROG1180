@@ -14,7 +14,8 @@ namespace GRASSLY
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!User.Identity.IsAuthenticated)
+                Response.Redirect("~/LogIn.aspx");
         }
 
         protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)

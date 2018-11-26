@@ -37,7 +37,8 @@ namespace GRASSLY
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!User.Identity.IsAuthenticated)
+                Response.Redirect("~/LogIn.aspx");
         }
 
         protected void btnClient_Click(object sender, EventArgs e)

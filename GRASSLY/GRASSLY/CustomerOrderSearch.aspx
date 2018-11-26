@@ -132,7 +132,7 @@
                  </tr>
                  <tr>
                      <td class="auto-style1">
-                         <asp:Button ID="btnClient" runat="server" Text="Search Customer" OnClick="btnClient_Click" />
+                         <asp:Button ID="btnClient" class="btn btn-primary" runat="server" Text="Search Customer" OnClick="btnClient_Click" />
                      </td>
                      <td class="auto-style2">&nbsp;</td>
                  </tr>
@@ -150,10 +150,10 @@
         <table class="w-100">
             <tr>
                 <td class="auto-style3">
-                    <asp:Button ID="btnService" runat="server" Text="Search Service" />
+                    <asp:Button ID="btnService"  class="btn btn-primary" runat="server" Text="Search Service" />
                 </td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Text="Search Order" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1"  class="btn btn-primary" runat="server"  Text="Search Order" OnClick="Button1_Click" />
                 </td>
             </tr>
         </table>

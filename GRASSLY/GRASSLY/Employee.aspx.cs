@@ -11,6 +11,8 @@ namespace GRASSLY
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!User.Identity.IsAuthenticated)
+                Response.Redirect("~/LogIn.aspx");
             GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
 
