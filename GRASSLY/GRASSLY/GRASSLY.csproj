@@ -125,6 +125,7 @@
     <Content Include="Main.aspx" />
     <Content Include="Management.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Styles.css" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
     <Content Include="Welcome.aspx" />

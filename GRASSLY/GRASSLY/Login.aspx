@@ -19,57 +19,57 @@
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#">Logo</a>
 
-  <!-- Links -->
- <%-- <ul class="navbar-nav">
-    <li class="nav-item text-right">
-      <a class="nav-link" href="Login.aspx">Login</a>
-    </li>
-  </ul>--%>
-</nav>
-    <div class="container">
-         <h2 class="display-3 text-center" style="font-weight: bold" >Login</h2> <!-- (Use for Titles) -->
-        <br />
-        <table id="login" class="table table-striped table-bordered" style="width:100%">
-            <tbody>
-            <tr>
-                <td>Username:</td>
-                <td>
-                    <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td>
-                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <br />
-        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
-        <asp:Button ID="btnRegister" runat="server" CausesValidation="False" Text="Register" OnClick="btnRegister_Click" />
-        <br />
-        <br />
-        <asp:Label ID="lblMessage" runat="server"></asp:Label>
-        <br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUser" ErrorMessage="Username is required"></asp:RequiredFieldValidator>
-        <br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPass" ErrorMessage="Password is required"></asp:RequiredFieldValidator>
     
-    </div>
-  <footer class="page-footer font-small bg-dark ">
-  <!-- Copyright -->
-  <div class="footer-copyright text-center p-3 text-white">© 2018 Copyright: BRIC
-  </div>
+<div class="container">
 
-</footer>
-    </form>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body">
+			    <form id="form2" runat="server">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+                        <asp:TextBox ID="txtUser" class="form-control"  placeholder="username" runat="server"></asp:TextBox>
+
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+                         <asp:TextBox ID="txtPass" runat="server" TextMode="Password" class="form-control" placeholder="password"></asp:TextBox>
+
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+                        <asp:Button ID="Button1" runat="server" class="btn float-right login_btn" Text="Login" OnClick="btnLogin_Click" />
+
+					</div>
+			     </form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account?<a href="Register.aspx">Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Forgot your password?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
 </body>
 </html>

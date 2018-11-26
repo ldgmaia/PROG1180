@@ -27,7 +27,7 @@ namespace GRASSLY
             IdentityUser user = manager.Find(txtUser.Text, txtPass.Text);
             if (user == null)
             {
-                lblMessage.Text = "Username or password is incorrect.";
+                //lblMessage.Text = "Username or password is incorrect.";
             }
             else
             {
