@@ -84,7 +84,7 @@
         <div class="container">
             <br />
             <div>
-            <h3 class="display-3" style="font-weight: bold" >Customerss</h3>
+            <h3 class="display-3" style="font-weight: bold" >Customers</h3>
                 <p class="display-3" style="font-weight: bold" >&nbsp;</p>
             </div>
             <asp:GridView ID="GridView2" class="table table-striped table-bordered" style="width:100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsCust">
