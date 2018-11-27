@@ -21,7 +21,6 @@ namespace GRASSLY
                 LogoutPath = new PathString("/LogIn"),
                 ExpireTimeSpan = System.TimeSpan.FromMinutes(5)
             });
-
         }
     }
 }

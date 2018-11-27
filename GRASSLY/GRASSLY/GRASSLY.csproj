@@ -122,10 +122,12 @@
     <Content Include="Employee.aspx" />
     <Content Include="EmployeeCreate.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Includes\Footer.aspx" />
+    <Content Include="Includes\Header.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Management.aspx" />
-    <Content Include="NavBar.aspx" />
+    <Content Include="Includes\NavBar.aspx" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Reports\ReportAnnual.aspx" />
@@ -183,6 +185,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Includes\Footer.aspx.cs">
+      <DependentUpon>Footer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\Footer.aspx.designer.cs">
+      <DependentUpon>Footer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\Header.aspx.cs">
+      <DependentUpon>Header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\Header.aspx.designer.cs">
+      <DependentUpon>Header.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,11 +220,11 @@
     <Compile Include="Management.aspx.designer.cs">
       <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NavBar.aspx.cs">
+    <Compile Include="Includes\NavBar.aspx.cs">
       <DependentUpon>NavBar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NavBar.aspx.designer.cs">
+    <Compile Include="Includes\NavBar.aspx.designer.cs">
       <DependentUpon>NavBar.aspx</DependentUpon>
     </Compile>
     <Compile Include="PlaceOrder.aspx.cs">
