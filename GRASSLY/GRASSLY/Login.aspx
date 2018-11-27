@@ -1,6 +1,7 @@
 ﻿<%-- 
     BRIC
     Vasco de Castro Ferraz Neto
+    Mazin Badr
     2018-19-11
 --%>
 
@@ -12,7 +13,7 @@
 <head runat="server">
     <title>Emma's System - Login</title>
     <!-- #Include virtual="/Includes/Header.aspx" -->
-    <link rel="stylesheet" type="text/css" href="/login.css">
+    <link rel="stylesheet" type="text/css" href="/login.css"/>
 </head>
 <body>
     <div class="container">

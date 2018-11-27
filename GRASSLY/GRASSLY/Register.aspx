@@ -12,6 +12,7 @@
 <head runat="server">
     <title>Emma's System - Registration Page</title>
     <!-- #Include virtual="/Includes/Header.aspx" -->
+    <link rel="stylesheet" type="text/css" href="/login.css"/>
 </head>
 <body>
 
@@ -42,9 +43,6 @@
                             <asp:TextBox ID="txtConfirm" runat="server" TextMode="Password" class="form-control" placeholder="Confirm password"></asp:TextBox>
 
                         </div>
-
-
-
                         <div class="form-group">
 
                             <asp:Button ID="btnRegister" runat="server" Text="Register" class="btn float-right login_btn" OnClick="btnRegister_Click" />
@@ -70,8 +68,6 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </body>
 </html>
