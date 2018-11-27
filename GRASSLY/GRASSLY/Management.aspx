@@ -10,10 +10,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <br />
             <div class="container">
-                <h3 class="display-3" style="font-weight: bold">Employees</h3>
-                <p class="display-3" style="font-weight: bold">&nbsp;</p>
+                <h1 class="display-3 text-center">Employees</h1><br />
             </div>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsEmpCrud">
                 <Columns>

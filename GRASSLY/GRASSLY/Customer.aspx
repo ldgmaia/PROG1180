@@ -10,12 +10,9 @@
 <body>
     <form id="form1" runat="server">
         <!-- #Include virtual="/Includes/NavBar.aspx" -->
-        <br />
         <div class="container">
-            <br />
             <div>
-                <h3 class="display-3" style="font-weight: bold">Customers</h3>
-                <p class="display-3" style="font-weight: bold">&nbsp;</p>
+                <h1 class="display-3 text-center">Customers</h1><br />
             </div>
             <asp:GridView ID="GridView2" class="table table-striped table-bordered dt-responsive" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsCust" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />

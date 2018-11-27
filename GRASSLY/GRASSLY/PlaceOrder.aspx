@@ -11,13 +11,10 @@
 
     <!-- #Include virtual="/Includes/NavBar.aspx" -->
 
-    <br />
     <form id="form1" runat="server">
         <div class="container">
-            <br />
             <div>
-                <h3 class="display-3" style="font-weight: bold">Place Order</h3>
-                <p class="display-3" style="font-weight: bold">&nbsp;</p>
+                <h1 class="display-3 text-center">Place Order</h1><br />
                 <p <%--class="display-3"--%> style="font-weight: bold">
                     Customer Name:
                     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="dsCustName" DataTextField="custFirst" DataValueField="id" Width="207px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">

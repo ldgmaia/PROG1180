@@ -16,7 +16,7 @@
         <br />
 
         <div class="container">
-            <h2 class="display-3 text-center" style="font-weight: bold">Sales</h2>
+            <h1 class="display-3 text-center" style="font-weight: bold">Sales</h1>
             <!-- (Use for Titles) -->
             <br />
             <div class="form-group row">

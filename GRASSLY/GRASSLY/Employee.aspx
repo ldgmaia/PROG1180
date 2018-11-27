@@ -12,13 +12,9 @@
 
         <!-- #Include virtual="/Includes/NavBar.aspx" -->
 
-        <br />
-
         <div class="container">
-            <br />
             <div>
-                <h3 class="display-3" style="font-weight: bold">Employees</h3>
-                <p class="display-3" style="font-weight: bold">&nbsp;</p>
+                <h1 class="display-3 text-center">Employees</h1><br />
             </div>
             <div>
                 <asp:GridView ID="GridView1" class="table table-striped table-bordered" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsEmployees" CellPadding="4" ForeColor="#333333" GridLines="None">

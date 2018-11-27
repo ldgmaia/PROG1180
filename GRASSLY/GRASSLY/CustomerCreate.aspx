@@ -15,7 +15,7 @@
         <div class="container">
             <br />
             <div>
-                <h3 class="display-3" style="font-weight: bold">New Customer</h3>
+                <h1 class="display-3 text-center">New Customer</h1><br />
                 <table class="w-100">
                     <tr>
                         <td>

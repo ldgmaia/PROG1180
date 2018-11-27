@@ -41,11 +41,11 @@
 
         <br />
         <div class="container">
-            <h2 class="display-3 text-center" style="font-weight: bold">Welcome to the Emma's Store!</h2>
+            <h1 class="display-3 text-center">Welcome to the Emma's Store!</h1>
             <!-- (Use for Titles) -->
             <br />
             <br />
-            <p>Please, login to use the system!</p>
+            <h3 class="display-3 text-center">Please, login to use the system!</h3>
             <br />
         </div>
 

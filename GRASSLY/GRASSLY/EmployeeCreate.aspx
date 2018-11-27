@@ -13,10 +13,8 @@
         <!-- #Include virtual="/Includes/NavBar.aspx" -->
 
         <div class="container">
-            <br />
             <div>
-                <h3 class="display-3" style="font-weight: bold">New Employee</h3>
-                <p class="display-3" style="font-weight: bold">&nbsp;</p>
+                <h1 class="display-3 text-center">New Employee</h1><br />
             </div>
             <table class="w-100">
                 <tr>

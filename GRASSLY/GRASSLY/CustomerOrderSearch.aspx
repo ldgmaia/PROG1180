@@ -32,9 +32,8 @@
 
         <!-- #Include virtual="/Includes/NavBar.aspx" -->
 
-        <br />
         <div class="container">
-            <h2 class="display-3 text-center" style="font-weight: bold">Search Oders / Services</h2>
+            <h1 class="display-3 text-center">Search Orders / Services</h1>
             <!-- (Use for Titles) -->
             <br />
 
