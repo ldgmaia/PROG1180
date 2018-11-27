@@ -9,18 +9,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="navBar" runat="server">
-            <!-- #Include virtual="/Includes/NavBar.aspx" -->
-        </div>
+
+        <!-- #Include virtual="/Includes/NavBar.aspx" -->
+
         <br />
         <div class="container">
             <h2 class="display-3 text-center" style="font-weight: bold">Welcome to the Emma's Store!</h2>
             <!-- (Use for Titles) -->
             <br />
         </div>
-        <div id="footer" runat="server">
-            <!-- #Include virtual="/Includes/Footer.aspx" -->
-        </div>
+        
+        <!-- #Include virtual="/Includes/Footer.aspx" -->
+
     </form>
 </body>
 </html>

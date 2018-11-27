@@ -9,10 +9,8 @@
 </head>
 <body>
 
+    <!-- #Include virtual="/Includes/NavBar.aspx" -->
 
-    <div id="navBar" runat="server">
-        <!-- #Include virtual="/NavBar.aspx" -->
-    </div>
     <br />
     <form id="form1" runat="server">
         <div class="container">
@@ -148,13 +146,8 @@
             </div>
         </div>
 
+        <!-- #Include virtual="/Includes/Footer.aspx" -->
 
-
-        <footer class="footer page-footer font-small bg-dark">
-            <div class="container text-center text-white">
-                <span class="footer-copyright text-center p-3">© 2018 Copyright: BRIC</span>
-            </div>
-        </footer>
     </form>
 
 </body>

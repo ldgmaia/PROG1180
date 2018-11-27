@@ -134,7 +134,7 @@
     <Content Include="Reports\ReportWarranty.aspx" />
     <Content Include="Reports\ReportWeekly.aspx" />
     <Content Include="StickyFooter.css" />
-    <Content Include="Styles.css" />
+    <Content Include="login.css" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
     <Content Include="Welcome.aspx" />

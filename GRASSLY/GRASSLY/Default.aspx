@@ -11,9 +11,8 @@
 <body>
     <form id="form1" runat="server">
 
-        <div id="navBar" runat="server">
-            <!-- #Include virtual="/NavBar.aspx" -->
-        </div>
+        <!-- #Include virtual="/Includes/NavBar.aspx" -->
+
         <br />
 
         <div class="container">
@@ -166,16 +165,9 @@
             <br />
             <br />
         </div>
-
-
-        <footer class="page-footer font-small bg-dark ">
-            <!-- Copyright -->
-            <div class="footer-copyright text-center p-3 text-white">
-                © 2018 Copyright: BRIC
-            </div>
-
-        </footer>
-
+            
+        <!-- #Include virtual="/Includes/Footer.aspx" -->
+    
     </form>
 
 </body>

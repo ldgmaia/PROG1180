@@ -12,6 +12,7 @@
 <head runat="server">
     <title>Emma's System - Login</title>
     <!-- #Include virtual="/Includes/Header.aspx" -->
+    <link rel="stylesheet" type="text/css" href="/login.css">
 </head>
 <body>
     <div class="container">
@@ -26,7 +27,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <asp:TextBox ID="txtUser" class="form-control" placeholder="username" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtUser" class="form-control" autofocus placeholder="username" runat="server"></asp:TextBox>
 
                         </div>
                         <div class="input-group form-group">
@@ -45,6 +46,7 @@
                         </div>
                     </form>
                 </div>
+
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
                         Don't have an account?<a href="Register.aspx">Sign Up</a>

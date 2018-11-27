@@ -120,13 +120,7 @@
             <br />
         </div>
 
-
-        <footer class="page-footer font-small bg-dark ">
-            <!-- Copyright -->
-            <div class="footer-copyright text-center p-3 text-white">
-                © 2018 Copyright: BRIC
-            </div>
-        </footer>
+        <!-- #Include virtual="/Includes/Footer.aspx" -->
     </form>
 </body>
 </html>
