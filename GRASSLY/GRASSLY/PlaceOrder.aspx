@@ -13,16 +13,19 @@
 
     <form id="form1" runat="server">
         <div class="container">
-            <div>
+
                 <h1 class="display-3 text-center">Place Order</h1><br />
-                <p <%--class="display-3"--%> style="font-weight: bold">
-                    Customer Name:
-                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="dsCustName" DataTextField="custFirst" DataValueField="id" Width="207px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+            <div class="form-group row">
+                <label for="DropDownList1" class="col-sm-3 col-form-label">Customer Name:</label>
+                <div class="col-sm-3">
+                    <asp:DropDownList ID="DropDownList1" class="form-control" runat="server" AutoPostBack="True" DataSourceID="dsCustName" DataTextField="custFirst" DataValueField="id" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                     </asp:DropDownList>
-                </p>
-                <p <%--class="display-3"--%> style="font-weight: bold">
-                    Customer Details:
-                    <asp:DetailsView ID="DetailsView1" class="table table-striped table-bordered" runat="server" AutoGenerateRows="False" DataKeyNames="id" DataSourceID="dsCustDetails" Height="50px" Width="329px">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="DetailsView1" class="col-sm-3 col-form-label">Customer Details:</label>
+                <div class="col-sm-3">
+                    <asp:DetailsView ID="DetailsView1" class="table table-striped table-bordered" runat="server" AutoGenerateRows="False" DataKeyNames="id" DataSourceID="dsCustDetails">
                         <Fields>
                             <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                             <asp:BoundField DataField="custFirst" HeaderText="First Name" SortExpression="custFirst" />
@@ -35,15 +38,19 @@
                             <asp:CommandField ShowEditButton="True" />
                         </Fields>
                     </asp:DetailsView>
-                </p>
-                <p <%--class="display-3"--%> style="font-weight: bold">
-                    Product Name:
-                    <asp:DropDownList ID="DropDownList2" runat="server" Width="225px" AutoPostBack="True" DataSourceID="dsProduct" DataTextField="prodName" DataValueField="id" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="DropDownList2" class="col-sm-3 col-form-label">Product Name:</label>
+                <div class="col-sm-3">
+                    <asp:DropDownList ID="DropDownList2" runat="server" class="form-control" AutoPostBack="True" DataSourceID="dsProduct" DataTextField="prodName" DataValueField="id" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
                     </asp:DropDownList>
-                </p>
-                <p <%--class="display-3"--%> style="font-weight: bold">
-                    Product Details:
-                    <asp:FormView ID="FormView1" class="table table-striped table-bordered" runat="server" Width="426px" DataKeyNames="id" DataSourceID="dsProduct">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="FormView1" class="col-sm-3 col-form-label">Product Details:</label>
+                <div class="col-sm-3">
+                    <asp:FormView ID="FormView1" class="table table-striped table-bordered" runat="server" DataKeyNames="id" DataSourceID="dsProduct">
                         <EditItemTemplate>
                             id:
                             <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' />
@@ -89,6 +96,12 @@
 
                         </ItemTemplate>
                     </asp:FormView>
+                </div>
+            </div>
+
+                <p <%--class="display-3"--%> style="font-weight: bold">
+                    
+
                 </p>
                 <p <%--class="display-3"--%> style="font-weight: bold">
                     <asp:Button ID="btnPlaceOrder" class="btn btn-primary" runat="server" Text="Place Order" Width="114px" />
@@ -141,7 +154,7 @@
                     <asp:SqlDataSource ID="dsProduct" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [id], [prodName], [prodDescription], [prodBrand] FROM [product]"></asp:SqlDataSource>
                 </p>
             </div>
-        </div>
+
 
         <!-- #Include virtual="/Includes/Footer.aspx" -->
 
