@@ -15,3 +15,4 @@ C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLI
 C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csproj.CoreCompileInputs.cache
 C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.dll
 C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.pdb
+C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csprojAssemblyReference.cache
