@@ -19,6 +19,5 @@
 <script>
     $(document).ready(function () {
         $('#GridView2').DataTable({});
-
     });
 </script>
