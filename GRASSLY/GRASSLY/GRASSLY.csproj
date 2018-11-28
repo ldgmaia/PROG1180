@@ -130,6 +130,7 @@
     <Content Include="Includes\NavBar.aspx" />
     <Content Include="OrderSearch.aspx" />
     <Content Include="PlaceOrder.aspx" />
+    <Content Include="PlaceSales.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Reports\ReportAnnual.aspx" />
     <Content Include="Reports\ReportWarranty.aspx" />
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="PlaceOrder.aspx.designer.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceSales.aspx.cs">
+      <DependentUpon>PlaceSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlaceSales.aspx.designer.cs">
+      <DependentUpon>PlaceSales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

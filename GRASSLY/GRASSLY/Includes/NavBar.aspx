@@ -15,7 +15,7 @@
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/Customer.aspx">Customer</a>
-                    <a class="dropdown-item" href="/PlaceOrder.aspx">Place Order</a>
+                    <a class="dropdown-item" href="/PlaceSales.aspx">Place Sales</a>
                     <a class="dropdown-item" href="#">Repair Request</a>
                     <a class="dropdown-item" href="/OrderSearch.aspx">Search Order</a>
                 </div>
