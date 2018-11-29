@@ -21,10 +21,17 @@
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
-                        <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                        <asp:BoundField DataField="empFirst" HeaderText="empFirst" SortExpression="empFirst" />
-                        <asp:BoundField DataField="empLast" HeaderText="empLast" SortExpression="empLast" />
-                        <asp:BoundField DataField="posID" HeaderText="posID" SortExpression="posID" />
+                        <asp:BoundField DataField="empFirst" HeaderText="First Name" SortExpression="empFirst" />
+                        <asp:BoundField DataField="empLast" HeaderText="Last Name" SortExpression="empLast" />
+                        <asp:TemplateField HeaderText="Position" SortExpression="posID">
+                            <EditItemTemplate>
+                                <asp:DropDownList ID="ddlPosition" runat="server" DataSourceID="dsPosition" DataTextField="posName" DataValueField="id">
+                                </asp:DropDownList>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("posID") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                     </Columns>
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
