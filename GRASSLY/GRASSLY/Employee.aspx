@@ -17,26 +17,14 @@
                 <h1 class="display-3 text-center">Employees</h1><br />
             </div>
             <div>
-                <asp:GridView ID="GridView1" class="table table-striped table-bordered" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsEmployees" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <asp:GridView ID="GridView1" class="table table-striped table-bordered" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsEmpCrud" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
-                        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                        <asp:BoundField DataField="custFirst" HeaderText="First Name" SortExpression="custFirst" />
-                        <asp:BoundField DataField="custLast" HeaderText="Last Name" SortExpression="custLast" />
-                        <asp:BoundField DataField="custPhone" HeaderText="Phone" SortExpression="custPhone" />
-                        <asp:BoundField DataField="custAddress" HeaderText="Address" SortExpression="custAddress" />
-                        <asp:BoundField DataField="custCity" HeaderText="City" SortExpression="custCity" />
-                        <asp:BoundField DataField="custPostal" HeaderText="Postal" SortExpression="custPostal" />
-                        <asp:BoundField DataField="custEmail" HeaderText="Email" SortExpression="custEmail" />
-                        <asp:TemplateField HeaderText="Position" SortExpression="posName">
-                            <EditItemTemplate>
-                                <asp:DropDownList ID="ddlPosition" runat="server" DataSourceID="dsPosition" DataTextField="posName" DataValueField="id">
-                                </asp:DropDownList>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("posName") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                        <asp:BoundField DataField="empFirst" HeaderText="empFirst" SortExpression="empFirst" />
+                        <asp:BoundField DataField="empLast" HeaderText="empLast" SortExpression="empLast" />
+                        <asp:BoundField DataField="posID" HeaderText="posID" SortExpression="posID" />
                     </Columns>
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

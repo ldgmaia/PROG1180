@@ -9,6 +9,7 @@ namespace GRASSLY
 {
     public partial class Employee : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!User.Identity.IsAuthenticated)
@@ -19,6 +20,12 @@ namespace GRASSLY
         protected void btnCreateEmp_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/EmployeeCreate.aspx");
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Response.Redirect("~/EmployeeCreate.aspx?selectedId=" + GridView1.SelectedRow.Cells[1].Text);
+
         }
     }
 }
