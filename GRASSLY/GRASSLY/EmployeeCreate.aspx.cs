@@ -27,8 +27,10 @@ namespace GRASSLY
             if (Request.QueryString["selectedId"] != null)
             {
                 id = Convert.ToInt32(Request.QueryString["selectedId"]);
+
                 if (IsPostBack)
                     return;
+
                 DataRow[] row = dsEmp.EmployeeCRUD.Select("id=" + id.ToString());
                 txtFirst.Text = row[0]["empFirst"].ToString();
                 txtLast.Text = row[0]["empLast"].ToString();

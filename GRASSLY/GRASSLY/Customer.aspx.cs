@@ -14,12 +14,16 @@ namespace GRASSLY
             GridView2.HeaderRow.TableSection = TableRowSection.TableHeader;
             if (!User.Identity.IsAuthenticated)
                 Response.Redirect("~/LogIn.aspx");
-
         }
 
         protected void btnCustCreate_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/CustomerCreate.aspx");
+        }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CustomerCreate.aspx?selectedId=" + GridView2.SelectedRow.Cells[1].Text);
         }
     }
 }
