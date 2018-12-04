@@ -71,18 +71,26 @@ namespace GRASSLY
                 dsEmp.EmployeeCRUD.Clear();
                 daEmp.Fill(dsEmp.EmployeeCRUD);
                 Response.Redirect("~/Employee.aspx");
-
-            //}
-            //catch(Exception ex)
-            //{
-            //    Label1.Text = ex.Message;
-            //    //this.lblSave.Text = "Unable to update - Invalid Input";
-            //}
         }
 
-        //protected void DetailsView1_ItemCommand(object sender, DetailsViewCommandEventArgs e)
-        //{
-        //    Response.Redirect("~/Management.aspx");
-        //}
+        protected void btnDeleteEmp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GRASSLYLIB.EmmasDataSet.EmployeeCRUDRow row = dsEmp.EmployeeCRUD.FindByid(id);
+
+                row.Delete();
+                GRASSLYLIB.EmmasDataSetTableAdapters.EmployeeCRUDTableAdapter daEmp = new GRASSLYLIB.EmmasDataSetTableAdapters.EmployeeCRUDTableAdapter();
+                daEmp.Update(dsEmp.EmployeeCRUD);
+                dsEmp.AcceptChanges();
+                dsEmp.CustomerCRUD.Clear();
+                daEmp.Fill(dsEmp.EmployeeCRUD);
+                Response.Redirect("~/Employee.aspx");
+            }
+            catch (Exception ex)
+            {
+                lblEmp.Text = ex.Message;
+            }
+        }
     }
 }

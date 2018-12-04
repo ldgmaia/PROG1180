@@ -23,7 +23,7 @@ namespace GRASSLY
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Response.Redirect("~/EmployeeCreate.aspx?selectedId=" + GridView1.SelectedRow.Cells[1].Text);
+            Response.Redirect("~/EmployeeCreate.aspx?selectedId=" + GridView1.SelectedValue);
         }
     }
 }

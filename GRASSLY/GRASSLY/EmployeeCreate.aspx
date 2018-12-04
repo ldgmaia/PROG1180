@@ -50,7 +50,10 @@
                     <td>
                         <asp:Button ID="btnCreateEmp" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Create" />
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Button ID="btnDeleteEmp" runat="server" OnClick="btnDeleteEmp_Click" Text="Delete" />
+                        <asp:Label ID="lblEmp" runat="server"></asp:Label>
+                    </td>
                 </tr>
             </table>
             <br />

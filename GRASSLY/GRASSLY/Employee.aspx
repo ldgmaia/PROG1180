@@ -23,15 +23,7 @@
                         <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="empFirst" HeaderText="First Name" SortExpression="empFirst" />
                         <asp:BoundField DataField="empLast" HeaderText="Last Name" SortExpression="empLast" />
-                        <asp:TemplateField HeaderText="Position" SortExpression="posID">
-                            <EditItemTemplate>
-                                <asp:DropDownList ID="ddlPosition" runat="server" DataSourceID="dsPosition" DataTextField="posName" DataValueField="id">
-                                </asp:DropDownList>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("posID") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                        <asp:BoundField DataField="posName" HeaderText="Position" SortExpression="posName" />
                     </Columns>
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -47,6 +39,7 @@
             </div>
             <br />
             &nbsp;<asp:Button ID="btnCreateEmp" runat="server" class="btn btn-primary" OnClick="btnCreateEmp_Click" Text="Create Employee" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
             <asp:SqlDataSource ID="dsEmployees" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [customer] WHERE [id] = @original_id AND (([custFirst] = @original_custFirst) OR ([custFirst] IS NULL AND @original_custFirst IS NULL)) AND (([custLast] = @original_custLast) OR ([custLast] IS NULL AND @original_custLast IS NULL)) AND (([custPhone] = @original_custPhone) OR ([custPhone] IS NULL AND @original_custPhone IS NULL)) AND (([custAddress] = @original_custAddress) OR ([custAddress] IS NULL AND @original_custAddress IS NULL)) AND (([custCity] = @original_custCity) OR ([custCity] IS NULL AND @original_custCity IS NULL)) AND (([custPostal] = @original_custPostal) OR ([custPostal] IS NULL AND @original_custPostal IS NULL)) AND (([custEmail] = @original_custEmail) OR ([custEmail] IS NULL AND @original_custEmail IS NULL))" InsertCommand="INSERT INTO [customer] ([custFirst], [custLast], [custPhone], [custAddress], [custCity], [custPostal], [custEmail]) VALUES (@custFirst, @custLast, @custPhone, @custAddress, @custCity, @custPostal, @custEmail)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT customer.id, customer.custFirst, customer.custLast, customer.custPhone, customer.custAddress, customer.custCity, customer.custPostal, customer.custEmail, position.posName FROM customer INNER JOIN position ON customer.id = position.id ORDER BY customer.custFirst, customer.custLast" UpdateCommand="UPDATE [customer] SET [custFirst] = @custFirst, [custLast] = @custLast, [custPhone] = @custPhone, [custAddress] = @custAddress, [custCity] = @custCity, [custPostal] = @custPostal, [custEmail] = @custEmail WHERE [id] = @original_id AND (([custFirst] = @original_custFirst) OR ([custFirst] IS NULL AND @original_custFirst IS NULL)) AND (([custLast] = @original_custLast) OR ([custLast] IS NULL AND @original_custLast IS NULL)) AND (([custPhone] = @original_custPhone) OR ([custPhone] IS NULL AND @original_custPhone IS NULL)) AND (([custAddress] = @original_custAddress) OR ([custAddress] IS NULL AND @original_custAddress IS NULL)) AND (([custCity] = @original_custCity) OR ([custCity] IS NULL AND @original_custCity IS NULL)) AND (([custPostal] = @original_custPostal) OR ([custPostal] IS NULL AND @original_custPostal IS NULL)) AND (([custEmail] = @original_custEmail) OR ([custEmail] IS NULL AND @original_custEmail IS NULL))">
@@ -88,27 +81,7 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            &nbsp;<asp:ObjectDataSource ID="dsEmpCrud" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.EmployeeCRUDTableAdapter" UpdateMethod="Update">
-                <DeleteParameters>
-                    <asp:Parameter Name="Original_id" Type="Int32" />
-                    <asp:Parameter Name="Original_empFirst" Type="String" />
-                    <asp:Parameter Name="Original_empLast" Type="String" />
-                    <asp:Parameter Name="Original_posID" Type="Int32" />
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="empFirst" Type="String" />
-                    <asp:Parameter Name="empLast" Type="String" />
-                    <asp:Parameter Name="posID" Type="Int32" />
-                </InsertParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="empFirst" Type="String" />
-                    <asp:Parameter Name="empLast" Type="String" />
-                    <asp:Parameter Name="posID" Type="Int32" />
-                    <asp:Parameter Name="Original_id" Type="Int32" />
-                    <asp:Parameter Name="Original_empFirst" Type="String" />
-                    <asp:Parameter Name="Original_empLast" Type="String" />
-                    <asp:Parameter Name="Original_posID" Type="Int32" />
-                </UpdateParameters>
+            &nbsp;<asp:ObjectDataSource ID="dsEmpCrud" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.EmployeeDisplayTableAdapter">
             </asp:ObjectDataSource>
             <asp:ObjectDataSource ID="dsPosition" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.positionTableAdapter"></asp:ObjectDataSource>
             <br />

@@ -81,7 +81,10 @@
                         <td>
                             <asp:Button ID="btnCreateCust" class="btn btn-primary" runat="server" OnClick="btnCreateCust_Click" Text="Create" />
                         </td>
-                        <td>&nbsp;</td>
+                        <td>
+                            <asp:Button ID="btnDeleteCust" runat="server" OnClick="btnDeleteCust_Click" Text="Delete" />
+                            <asp:Label ID="lblCust" runat="server"></asp:Label>
+                        </td>
                     </tr>
                 </table>
             </div>

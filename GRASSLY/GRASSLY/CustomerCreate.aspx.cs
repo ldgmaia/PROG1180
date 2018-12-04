@@ -83,59 +83,27 @@ namespace GRASSLY
             dsCust.CustomerCRUD.Clear();
             daCust.Fill(dsCust.CustomerCRUD);
             Response.Redirect("~/Customer.aspx");
-
-            //}
-            //catch(Exception ex)
-            //{
-            //    Label1.Text = ex.Message;
-            //    //this.lblSave.Text = "Unable to update - Invalid Input";
-            //}
         }
 
-        //protected void DetailsView1_ItemCommand(object sender, DetailsViewCommandEventArgs e)
-        //{
-        //    Response.Redirect("~/Management.aspx");
-        //}
+        protected void btnDeleteCust_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GRASSLYLIB.EmmasDataSet.CustomerCRUDRow row = dsCust.CustomerCRUD.FindByid(id);
+
+                row.Delete();
+                GRASSLYLIB.EmmasDataSetTableAdapters.CustomerCRUDTableAdapter daCust = new GRASSLYLIB.EmmasDataSetTableAdapters.CustomerCRUDTableAdapter();
+                daCust.Update(dsCust.CustomerCRUD);
+                dsCust.AcceptChanges();
+                dsCust.CustomerCRUD.Clear();
+                daCust.Fill(dsCust.CustomerCRUD);
+                Response.Redirect("~/Customer.aspx");
+            }
+            catch(Exception ex)
+            {
+                lblCust.Text = ex.Message;
+            }
+        }
     }
 }
 
-
-
-
-//        protected void Page_Load(object sender, EventArgs e)
-//        {
-//            if (!User.Identity.IsAuthenticated)
-//                Response.Redirect("~/LogIn.aspx");
-//        }
-
-//        protected void DetailsView1_ItemCommand(object sender, DetailsViewCommandEventArgs e)
-//        {
-//            Response.Redirect("~/Customer.aspx");
-//        }
-
-//        protected void btnCreateCust_Click(object sender, EventArgs e)
-//        {
-//            try
-//            {
-//                GRASSLYLIB.EmmasDataSet dsCust = new EmmasDataSet();
-//                DataRow r = dsCust.CustomerCRUD.NewRow();
-//                r["custFirst"] = this.txtFirst.Text; 
-//                r["custPhone"] = this.txtPhone.Text;
-//                r["custAddress"] = this.txtAddress.Text;
-//                r["custCity"] = this.txtCity.Text;
-//                r["custPostal"] = this.txtPostal.Text;
-//                r["custEmail"] = this.txtEmail.Text;
-//                r["custLast"] = this.txtLast.Text;
-//                dsCust.CustomerCRUD.Rows.Add(r);
-//                GRASSLYLIB.EmmasDataSetTableAdapters.CustomerCRUDTableAdapter daCust = new GRASSLYLIB.EmmasDataSetTableAdapters.CustomerCRUDTableAdapter();
-//                daCust.Update(dsCust.CustomerCRUD);
-//                dsCust.AcceptChanges();
-//                Response.Redirect("~/Customer.aspx");
-//            }
-//            catch
-//            {
-//                //this.lblSave.Text = "Unable to update - Invalid Input";
-//            }
-//        }
-//    }
-//}

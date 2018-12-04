@@ -459,6 +459,28 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeDisplayTableAdapter" GeneratorDataComponentClassName="EmployeeDisplayTableAdapter" Name="EmployeeDisplay" UserDataComponentName="EmployeeDisplayTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EmmasConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        employee.id, employee.empFirst, employee.empLast, position.posName
+FROM            employee INNER JOIN
+                         position ON employee.posID = position.id
+Order By employee.empLast, employee.empFirst</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="empFirst" DataSetColumn="empFirst" />
+              <Mapping SourceColumn="empLast" DataSetColumn="empLast" />
+              <Mapping SourceColumn="posName" DataSetColumn="posName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -467,7 +489,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
   <xs:element name="EmmasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EmmasDataSet" msprop:Generator_UserDSName="EmmasDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="customer" msprop:Generator_TableClassName="customerDataTable" msprop:Generator_TableVarName="tablecustomer" msprop:Generator_TablePropName="customer" msprop:Generator_RowDeletingName="customerRowDeleting" msprop:Generator_RowChangingName="customerRowChanging" msprop:Generator_RowEvHandlerName="customerRowChangeEventHandler" msprop:Generator_RowDeletedName="customerRowDeleted" msprop:Generator_UserTableName="customer" msprop:Generator_RowChangedName="customerRowChanged" msprop:Generator_RowEvArgName="customerRowChangeEvent" msprop:Generator_RowClassName="customerRow">
+        <xs:element name="customer" msprop:Generator_TableClassName="customerDataTable" msprop:Generator_TableVarName="tablecustomer" msprop:Generator_RowChangedName="customerRowChanged" msprop:Generator_TablePropName="customer" msprop:Generator_RowDeletingName="customerRowDeleting" msprop:Generator_RowChangingName="customerRowChanging" msprop:Generator_RowEvHandlerName="customerRowChangeEventHandler" msprop:Generator_RowDeletedName="customerRowDeleted" msprop:Generator_RowClassName="customerRow" msprop:Generator_UserTableName="customer" msprop:Generator_RowEvArgName="customerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -523,7 +545,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EmployeeCRUD" msprop:Generator_TableClassName="EmployeeCRUDDataTable" msprop:Generator_TableVarName="tableEmployeeCRUD" msprop:Generator_TablePropName="EmployeeCRUD" msprop:Generator_RowDeletingName="EmployeeCRUDRowDeleting" msprop:Generator_RowChangingName="EmployeeCRUDRowChanging" msprop:Generator_RowEvHandlerName="EmployeeCRUDRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeCRUDRowDeleted" msprop:Generator_UserTableName="EmployeeCRUD" msprop:Generator_RowChangedName="EmployeeCRUDRowChanged" msprop:Generator_RowEvArgName="EmployeeCRUDRowChangeEvent" msprop:Generator_RowClassName="EmployeeCRUDRow">
+        <xs:element name="EmployeeCRUD" msprop:Generator_TableClassName="EmployeeCRUDDataTable" msprop:Generator_TableVarName="tableEmployeeCRUD" msprop:Generator_RowChangedName="EmployeeCRUDRowChanged" msprop:Generator_TablePropName="EmployeeCRUD" msprop:Generator_RowDeletingName="EmployeeCRUDRowDeleting" msprop:Generator_RowChangingName="EmployeeCRUDRowChanging" msprop:Generator_RowEvHandlerName="EmployeeCRUDRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeCRUDRowDeleted" msprop:Generator_RowClassName="EmployeeCRUDRow" msprop:Generator_UserTableName="EmployeeCRUD" msprop:Generator_RowEvArgName="EmployeeCRUDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -545,7 +567,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CustomerCRUD" msprop:Generator_TableClassName="CustomerCRUDDataTable" msprop:Generator_TableVarName="tableCustomerCRUD" msprop:Generator_TablePropName="CustomerCRUD" msprop:Generator_RowDeletingName="CustomerCRUDRowDeleting" msprop:Generator_RowChangingName="CustomerCRUDRowChanging" msprop:Generator_RowEvHandlerName="CustomerCRUDRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerCRUDRowDeleted" msprop:Generator_UserTableName="CustomerCRUD" msprop:Generator_RowChangedName="CustomerCRUDRowChanged" msprop:Generator_RowEvArgName="CustomerCRUDRowChangeEvent" msprop:Generator_RowClassName="CustomerCRUDRow">
+        <xs:element name="CustomerCRUD" msprop:Generator_TableClassName="CustomerCRUDDataTable" msprop:Generator_TableVarName="tableCustomerCRUD" msprop:Generator_RowChangedName="CustomerCRUDRowChanged" msprop:Generator_TablePropName="CustomerCRUD" msprop:Generator_RowDeletingName="CustomerCRUDRowDeleting" msprop:Generator_RowChangingName="CustomerCRUDRowChanging" msprop:Generator_RowEvHandlerName="CustomerCRUDRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerCRUDRowDeleted" msprop:Generator_RowClassName="CustomerCRUDRow" msprop:Generator_UserTableName="CustomerCRUD" msprop:Generator_RowEvArgName="CustomerCRUDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -601,7 +623,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="position" msprop:Generator_TableClassName="positionDataTable" msprop:Generator_TableVarName="tableposition" msprop:Generator_TablePropName="position" msprop:Generator_RowDeletingName="positionRowDeleting" msprop:Generator_RowChangingName="positionRowChanging" msprop:Generator_RowEvHandlerName="positionRowChangeEventHandler" msprop:Generator_RowDeletedName="positionRowDeleted" msprop:Generator_UserTableName="position" msprop:Generator_RowChangedName="positionRowChanged" msprop:Generator_RowEvArgName="positionRowChangeEvent" msprop:Generator_RowClassName="positionRow">
+        <xs:element name="position" msprop:Generator_TableClassName="positionDataTable" msprop:Generator_TableVarName="tableposition" msprop:Generator_RowChangedName="positionRowChanged" msprop:Generator_TablePropName="position" msprop:Generator_RowDeletingName="positionRowDeleting" msprop:Generator_RowChangingName="positionRowChanging" msprop:Generator_RowEvHandlerName="positionRowChangeEventHandler" msprop:Generator_RowDeletedName="positionRowDeleted" msprop:Generator_RowClassName="positionRow" msprop:Generator_UserTableName="position" msprop:Generator_RowEvArgName="positionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -615,7 +637,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CustomerOrder" msprop:Generator_TableClassName="CustomerOrderDataTable" msprop:Generator_TableVarName="tableCustomerOrder" msprop:Generator_RowChangedName="CustomerOrderRowChanged" msprop:Generator_TablePropName="CustomerOrder" msprop:Generator_RowDeletingName="CustomerOrderRowDeleting" msprop:Generator_RowChangingName="CustomerOrderRowChanging" msprop:Generator_RowEvHandlerName="CustomerOrderRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerOrderRowDeleted" msprop:Generator_RowClassName="CustomerOrderRow" msprop:Generator_UserTableName="CustomerOrder" msprop:Generator_RowEvArgName="CustomerOrderRowChangeEvent">
+        <xs:element name="CustomerOrder" msprop:Generator_TableClassName="CustomerOrderDataTable" msprop:Generator_TableVarName="tableCustomerOrder" msprop:Generator_TablePropName="CustomerOrder" msprop:Generator_RowDeletingName="CustomerOrderRowDeleting" msprop:Generator_RowChangingName="CustomerOrderRowChanging" msprop:Generator_RowEvHandlerName="CustomerOrderRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerOrderRowDeleted" msprop:Generator_UserTableName="CustomerOrder" msprop:Generator_RowChangedName="CustomerOrderRowChanged" msprop:Generator_RowEvArgName="CustomerOrderRowChangeEvent" msprop:Generator_RowClassName="CustomerOrderRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -647,7 +669,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CustomerService" msprop:Generator_TableClassName="CustomerServiceDataTable" msprop:Generator_TableVarName="tableCustomerService" msprop:Generator_RowChangedName="CustomerServiceRowChanged" msprop:Generator_TablePropName="CustomerService" msprop:Generator_RowDeletingName="CustomerServiceRowDeleting" msprop:Generator_RowChangingName="CustomerServiceRowChanging" msprop:Generator_RowEvHandlerName="CustomerServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerServiceRowDeleted" msprop:Generator_RowClassName="CustomerServiceRow" msprop:Generator_UserTableName="CustomerService" msprop:Generator_RowEvArgName="CustomerServiceRowChangeEvent">
+        <xs:element name="CustomerService" msprop:Generator_TableClassName="CustomerServiceDataTable" msprop:Generator_TableVarName="tableCustomerService" msprop:Generator_TablePropName="CustomerService" msprop:Generator_RowDeletingName="CustomerServiceRowDeleting" msprop:Generator_RowChangingName="CustomerServiceRowChanging" msprop:Generator_RowEvHandlerName="CustomerServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerServiceRowDeleted" msprop:Generator_UserTableName="CustomerService" msprop:Generator_RowChangedName="CustomerServiceRowChanged" msprop:Generator_RowEvArgName="CustomerServiceRowChangeEvent" msprop:Generator_RowClassName="CustomerServiceRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -688,7 +710,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="OrderSearch" msprop:Generator_TableClassName="OrderSearchDataTable" msprop:Generator_TableVarName="tableOrderSearch" msprop:Generator_TablePropName="OrderSearch" msprop:Generator_RowDeletingName="OrderSearchRowDeleting" msprop:Generator_RowChangingName="OrderSearchRowChanging" msprop:Generator_RowEvHandlerName="OrderSearchRowChangeEventHandler" msprop:Generator_RowDeletedName="OrderSearchRowDeleted" msprop:Generator_UserTableName="OrderSearch" msprop:Generator_RowChangedName="OrderSearchRowChanged" msprop:Generator_RowEvArgName="OrderSearchRowChangeEvent" msprop:Generator_RowClassName="OrderSearchRow">
+        <xs:element name="OrderSearch" msprop:Generator_TableClassName="OrderSearchDataTable" msprop:Generator_TableVarName="tableOrderSearch" msprop:Generator_RowChangedName="OrderSearchRowChanged" msprop:Generator_TablePropName="OrderSearch" msprop:Generator_RowDeletingName="OrderSearchRowDeleting" msprop:Generator_RowChangingName="OrderSearchRowChanging" msprop:Generator_RowEvHandlerName="OrderSearchRowChangeEventHandler" msprop:Generator_RowDeletedName="OrderSearchRowDeleted" msprop:Generator_RowClassName="OrderSearchRow" msprop:Generator_UserTableName="OrderSearch" msprop:Generator_RowEvArgName="OrderSearchRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CustomerFull" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustomerFull" msprop:Generator_ColumnPropNameInRow="CustomerFull" msprop:Generator_ColumnPropNameInTable="CustomerFullColumn" msprop:Generator_UserColumnName="CustomerFull" minOccurs="0">
@@ -741,7 +763,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="service_order" msprop:Generator_TableClassName="service_orderDataTable" msprop:Generator_TableVarName="tableservice_order" msprop:Generator_TablePropName="service_order" msprop:Generator_RowDeletingName="service_orderRowDeleting" msprop:Generator_RowChangingName="service_orderRowChanging" msprop:Generator_RowEvHandlerName="service_orderRowChangeEventHandler" msprop:Generator_RowDeletedName="service_orderRowDeleted" msprop:Generator_UserTableName="service_order" msprop:Generator_RowChangedName="service_orderRowChanged" msprop:Generator_RowEvArgName="service_orderRowChangeEvent" msprop:Generator_RowClassName="service_orderRow">
+        <xs:element name="service_order" msprop:Generator_TableClassName="service_orderDataTable" msprop:Generator_TableVarName="tableservice_order" msprop:Generator_RowChangedName="service_orderRowChanged" msprop:Generator_TablePropName="service_order" msprop:Generator_RowDeletingName="service_orderRowDeleting" msprop:Generator_RowChangingName="service_orderRowChanging" msprop:Generator_RowEvHandlerName="service_orderRowChangeEventHandler" msprop:Generator_RowDeletedName="service_orderRowDeleted" msprop:Generator_RowClassName="service_orderRow" msprop:Generator_UserTableName="service_order" msprop:Generator_RowEvArgName="service_orderRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -760,7 +782,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EmployeeList" msprop:Generator_TableClassName="EmployeeListDataTable" msprop:Generator_TableVarName="tableEmployeeList" msprop:Generator_TablePropName="EmployeeList" msprop:Generator_RowDeletingName="EmployeeListRowDeleting" msprop:Generator_RowChangingName="EmployeeListRowChanging" msprop:Generator_RowEvHandlerName="EmployeeListRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeListRowDeleted" msprop:Generator_UserTableName="EmployeeList" msprop:Generator_RowChangedName="EmployeeListRowChanged" msprop:Generator_RowEvArgName="EmployeeListRowChangeEvent" msprop:Generator_RowClassName="EmployeeListRow">
+        <xs:element name="EmployeeList" msprop:Generator_TableClassName="EmployeeListDataTable" msprop:Generator_TableVarName="tableEmployeeList" msprop:Generator_RowChangedName="EmployeeListRowChanged" msprop:Generator_TablePropName="EmployeeList" msprop:Generator_RowDeletingName="EmployeeListRowDeleting" msprop:Generator_RowChangingName="EmployeeListRowChanging" msprop:Generator_RowEvHandlerName="EmployeeListRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeListRowDeleted" msprop:Generator_RowClassName="EmployeeListRow" msprop:Generator_UserTableName="EmployeeList" msprop:Generator_RowEvArgName="EmployeeListRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -774,7 +796,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Inventory" msprop:Generator_TableClassName="InventoryDataTable" msprop:Generator_TableVarName="tableInventory" msprop:Generator_RowChangedName="InventoryRowChanged" msprop:Generator_TablePropName="Inventory" msprop:Generator_RowDeletingName="InventoryRowDeleting" msprop:Generator_RowChangingName="InventoryRowChanging" msprop:Generator_RowEvHandlerName="InventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="InventoryRowDeleted" msprop:Generator_RowClassName="InventoryRow" msprop:Generator_UserTableName="Inventory" msprop:Generator_RowEvArgName="InventoryRowChangeEvent">
+        <xs:element name="Inventory" msprop:Generator_TableClassName="InventoryDataTable" msprop:Generator_TableVarName="tableInventory" msprop:Generator_TablePropName="Inventory" msprop:Generator_RowDeletingName="InventoryRowDeleting" msprop:Generator_RowChangingName="InventoryRowChanging" msprop:Generator_RowEvHandlerName="InventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="InventoryRowDeleted" msprop:Generator_UserTableName="Inventory" msprop:Generator_RowChangedName="InventoryRowChanged" msprop:Generator_RowEvArgName="InventoryRowChangeEvent" msprop:Generator_RowClassName="InventoryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -812,7 +834,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ReportAnnualProduct" msprop:Generator_TableClassName="ReportAnnualProductDataTable" msprop:Generator_TableVarName="tableReportAnnualProduct" msprop:Generator_TablePropName="ReportAnnualProduct" msprop:Generator_RowDeletingName="ReportAnnualProductRowDeleting" msprop:Generator_RowChangingName="ReportAnnualProductRowChanging" msprop:Generator_RowEvHandlerName="ReportAnnualProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportAnnualProductRowDeleted" msprop:Generator_UserTableName="ReportAnnualProduct" msprop:Generator_RowChangedName="ReportAnnualProductRowChanged" msprop:Generator_RowEvArgName="ReportAnnualProductRowChangeEvent" msprop:Generator_RowClassName="ReportAnnualProductRow">
+        <xs:element name="ReportAnnualProduct" msprop:Generator_TableClassName="ReportAnnualProductDataTable" msprop:Generator_TableVarName="tableReportAnnualProduct" msprop:Generator_RowChangedName="ReportAnnualProductRowChanged" msprop:Generator_TablePropName="ReportAnnualProduct" msprop:Generator_RowDeletingName="ReportAnnualProductRowDeleting" msprop:Generator_RowChangingName="ReportAnnualProductRowChanging" msprop:Generator_RowEvHandlerName="ReportAnnualProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportAnnualProductRowDeleted" msprop:Generator_RowClassName="ReportAnnualProductRow" msprop:Generator_UserTableName="ReportAnnualProduct" msprop:Generator_RowEvArgName="ReportAnnualProductRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Receipt" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnReceipt" msprop:Generator_ColumnPropNameInRow="Receipt" msprop:Generator_ColumnPropNameInTable="ReceiptColumn" msprop:Generator_UserColumnName="Receipt" type="xs:int" />
@@ -828,7 +850,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ReportAnnualService" msprop:Generator_TableClassName="ReportAnnualServiceDataTable" msprop:Generator_TableVarName="tableReportAnnualService" msprop:Generator_TablePropName="ReportAnnualService" msprop:Generator_RowDeletingName="ReportAnnualServiceRowDeleting" msprop:Generator_RowChangingName="ReportAnnualServiceRowChanging" msprop:Generator_RowEvHandlerName="ReportAnnualServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportAnnualServiceRowDeleted" msprop:Generator_UserTableName="ReportAnnualService" msprop:Generator_RowChangedName="ReportAnnualServiceRowChanged" msprop:Generator_RowEvArgName="ReportAnnualServiceRowChangeEvent" msprop:Generator_RowClassName="ReportAnnualServiceRow">
+        <xs:element name="ReportAnnualService" msprop:Generator_TableClassName="ReportAnnualServiceDataTable" msprop:Generator_TableVarName="tableReportAnnualService" msprop:Generator_RowChangedName="ReportAnnualServiceRowChanged" msprop:Generator_TablePropName="ReportAnnualService" msprop:Generator_RowDeletingName="ReportAnnualServiceRowDeleting" msprop:Generator_RowChangingName="ReportAnnualServiceRowChanging" msprop:Generator_RowEvHandlerName="ReportAnnualServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportAnnualServiceRowDeleted" msprop:Generator_RowClassName="ReportAnnualServiceRow" msprop:Generator_UserTableName="ReportAnnualService" msprop:Generator_RowEvArgName="ReportAnnualServiceRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -844,7 +866,7 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ReportWarranty" msprop:Generator_TableClassName="ReportWarrantyDataTable" msprop:Generator_TableVarName="tableReportWarranty" msprop:Generator_TablePropName="ReportWarranty" msprop:Generator_RowDeletingName="ReportWarrantyRowDeleting" msprop:Generator_RowChangingName="ReportWarrantyRowChanging" msprop:Generator_RowEvHandlerName="ReportWarrantyRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportWarrantyRowDeleted" msprop:Generator_UserTableName="ReportWarranty" msprop:Generator_RowChangedName="ReportWarrantyRowChanged" msprop:Generator_RowEvArgName="ReportWarrantyRowChangeEvent" msprop:Generator_RowClassName="ReportWarrantyRow">
+        <xs:element name="ReportWarranty" msprop:Generator_TableClassName="ReportWarrantyDataTable" msprop:Generator_TableVarName="tableReportWarranty" msprop:Generator_RowChangedName="ReportWarrantyRowChanged" msprop:Generator_TablePropName="ReportWarranty" msprop:Generator_RowDeletingName="ReportWarrantyRowDeleting" msprop:Generator_RowChangingName="ReportWarrantyRowChanging" msprop:Generator_RowEvHandlerName="ReportWarrantyRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportWarrantyRowDeleted" msprop:Generator_RowClassName="ReportWarrantyRow" msprop:Generator_UserTableName="ReportWarranty" msprop:Generator_RowEvArgName="ReportWarrantyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Receipt" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnReceipt" msprop:Generator_ColumnPropNameInRow="Receipt" msprop:Generator_ColumnPropNameInTable="ReceiptColumn" msprop:Generator_UserColumnName="Receipt" type="xs:int" />
@@ -885,6 +907,34 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Date_x0020_Out" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDate_Out" msprop:Generator_ColumnPropNameInRow="Date_Out" msprop:Generator_ColumnPropNameInTable="Date_OutColumn" msprop:Generator_UserColumnName="Date Out" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EmployeeDisplay" msprop:Generator_TableClassName="EmployeeDisplayDataTable" msprop:Generator_TableVarName="tableEmployeeDisplay" msprop:Generator_TablePropName="EmployeeDisplay" msprop:Generator_RowDeletingName="EmployeeDisplayRowDeleting" msprop:Generator_RowChangingName="EmployeeDisplayRowChanging" msprop:Generator_RowEvHandlerName="EmployeeDisplayRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeDisplayRowDeleted" msprop:Generator_UserTableName="EmployeeDisplay" msprop:Generator_RowChangedName="EmployeeDisplayRowChanged" msprop:Generator_RowEvArgName="EmployeeDisplayRowChangeEvent" msprop:Generator_RowClassName="EmployeeDisplayRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="empFirst" msprop:Generator_ColumnVarNameInTable="columnempFirst" msprop:Generator_ColumnPropNameInRow="empFirst" msprop:Generator_ColumnPropNameInTable="empFirstColumn" msprop:Generator_UserColumnName="empFirst" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empLast" msprop:Generator_ColumnVarNameInTable="columnempLast" msprop:Generator_ColumnPropNameInRow="empLast" msprop:Generator_ColumnPropNameInTable="empLastColumn" msprop:Generator_UserColumnName="empLast" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="posName" msprop:Generator_ColumnVarNameInTable="columnposName" msprop:Generator_ColumnPropNameInRow="posName" msprop:Generator_ColumnPropNameInTable="posNameColumn" msprop:Generator_UserColumnName="posName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
@@ -947,6 +997,10 @@ WHERE  (r.ordDate BETWEEN @iniDate AND @endDate) AND (so.serordWarranty = 1)</Co
     <xs:unique name="ReportWarranty_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ReportWarranty" />
       <xs:field xpath="mstns:Receipt" />
+    </xs:unique>
+    <xs:unique name="EmployeeDisplay_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EmployeeDisplay" />
+      <xs:field xpath="mstns:id" />
     </xs:unique>
   </xs:element>
 </xs:schema>
