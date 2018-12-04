@@ -101,7 +101,12 @@ namespace GRASSLY
             }
             catch(Exception ex)
             {
-                lblCust.Text = ex.Message;
+                if(ex.Message.Contains("fk"))
+                    lblCust.Text = "You can't delete this customer, they have other records.";
+                else
+                {
+                    lblCust.Text = ex.Message;
+                }
             }
         }
     }

@@ -89,7 +89,12 @@ namespace GRASSLY
             }
             catch (Exception ex)
             {
-                lblEmp.Text = ex.Message;
+                if (ex.Message.Contains("fk"))
+                    lblEmp.Text = "You can't delete this employee, they have other records.";
+                else
+                {
+                    lblEmp.Text = ex.Message;
+                }
             }
         }
     }

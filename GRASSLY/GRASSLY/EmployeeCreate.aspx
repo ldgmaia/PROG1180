@@ -52,11 +52,11 @@
                     </td>
                     <td>
                         <asp:Button ID="btnDeleteEmp" runat="server" OnClick="btnDeleteEmp_Click" Text="Delete" />
-                        <asp:Label ID="lblEmp" runat="server"></asp:Label>
                     </td>
                 </tr>
             </table>
             <br />
+                        <asp:Label ID="lblEmp" runat="server"></asp:Label>
             <br />
         </div>
         <br />
