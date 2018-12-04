@@ -89,6 +89,8 @@ namespace GRASSLY
             }
             catch (Exception ex)
             {
+                lblEmp.ForeColor = System.Drawing.Color.Red;
+
                 if (ex.Message.Contains("fk"))
                     lblEmp.Text = "You can't delete this employee, they have other records.";
                 else

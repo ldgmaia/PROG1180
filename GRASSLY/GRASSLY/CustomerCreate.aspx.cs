@@ -101,6 +101,7 @@ namespace GRASSLY
             }
             catch(Exception ex)
             {
+                lblCust.ForeColor = System.Drawing.Color.Red;
                 if(ex.Message.Contains("fk"))
                     lblCust.Text = "You can't delete this customer, they have other records.";
                 else
