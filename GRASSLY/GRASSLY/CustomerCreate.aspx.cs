@@ -110,6 +110,11 @@ namespace GRASSLY
                 }
             }
         }
+
+        protected void btnCancelCust_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Customer.aspx");
+        }
     }
 }
 

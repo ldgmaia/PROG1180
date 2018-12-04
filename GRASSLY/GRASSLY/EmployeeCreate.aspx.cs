@@ -99,5 +99,10 @@ namespace GRASSLY
                 }
             }
         }
+
+        protected void btnCancelEmp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Employee.aspx");
+        }
     }
 }

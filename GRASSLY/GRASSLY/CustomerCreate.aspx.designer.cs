@@ -166,6 +166,15 @@ namespace GRASSLY {
         protected global::System.Web.UI.WebControls.Button btnDeleteCust;
         
         /// <summary>
+        /// btnCancelCust control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancelCust;
+        
+        /// <summary>
         /// lblCust control.
         /// </summary>
         /// <remarks>

@@ -30,7 +30,7 @@
                             <asp:Label ID="Label2" runat="server" Text="Last Name:"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtLast" runat="server" Width="220px"></asp:TextBox>
+                            <asp:TextBox ID="txtLast" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -80,9 +80,10 @@
                     <tr>
                         <td>
                             <asp:Button ID="btnCreateCust" class="btn btn-primary" runat="server" OnClick="btnCreateCust_Click" Text="Create" />
+                            <asp:Button ID="btnDeleteCust" class="btn btn-primary" runat="server" OnClick="btnDeleteCust_Click" Text="Delete" />
                         </td>
                         <td>
-                            <asp:Button ID="btnDeleteCust" runat="server" OnClick="btnDeleteCust_Click" Text="Delete" />
+                            <asp:Button ID="btnCancelCust" class="btn btn-primary" runat="server" Text="Cancel" OnClick="btnCancelCust_Click" />
                         </td>
                     </tr>
                 </table>

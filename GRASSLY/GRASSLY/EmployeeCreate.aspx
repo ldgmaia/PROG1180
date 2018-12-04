@@ -49,9 +49,10 @@
                 <tr>
                     <td>
                         <asp:Button ID="btnCreateEmp" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Create" />
+                        <asp:Button ID="btnDeleteEmp" class="btn btn-primary" runat="server" OnClick="btnDeleteEmp_Click" Text="Delete" />
                     </td>
                     <td>
-                        <asp:Button ID="btnDeleteEmp" runat="server" OnClick="btnDeleteEmp_Click" Text="Delete" />
+                        <asp:Button ID="btnCancelEmp" class="btn btn-primary" runat="server" OnClick="btnCancelEmp_Click" Text="Cancel" />
                     </td>
                 </tr>
             </table>
