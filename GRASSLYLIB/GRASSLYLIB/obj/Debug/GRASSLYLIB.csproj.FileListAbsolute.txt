@@ -16,3 +16,12 @@ C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLI
 C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.dll
 C:\Users\doerr\Desktop\Github\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.pdb
 C:\MyWork\GitHub\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csprojAssemblyReference.cache
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\Emmas.mdf
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\Emmas_log.ldf
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.dll.config
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.dll
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.pdb
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csproj.CoreCompileInputs.cache
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.dll
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.pdb
+C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csprojAssemblyReference.cache
