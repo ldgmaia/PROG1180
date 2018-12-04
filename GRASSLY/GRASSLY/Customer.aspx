@@ -14,10 +14,10 @@
             <div>
                 <h1 class="display-3 text-center">Customers</h1><br />
             </div>
-            <asp:GridView ID="GridView2" class="table table-striped table-bordered dt-responsive" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsCust" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="GridView2" class="table table-striped table-bordered dt-responsive" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsCust" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="custFirst" HeaderText="First Name" SortExpression="custFirst" />
                     <asp:BoundField DataField="custLast" HeaderText="Last Name" SortExpression="custLast" />
                     <asp:BoundField DataField="custPhone" HeaderText="Phone" SortExpression="custPhone" />
