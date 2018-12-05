@@ -24,7 +24,6 @@ C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYL
 C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csproj.CoreCompileInputs.cache
 C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.dll
 C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.pdb
-C:\College\03-PROG1180-01 Project Planning & Design\PROG1180\GRASSLYLIB\GRASSLYLIB\obj\Debug\GRASSLYLIB.csprojAssemblyReference.cache
 C:\Users\Administrator\Source\Repos\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\Emmas.mdf
 C:\Users\Administrator\Source\Repos\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\Emmas_log.ldf
 C:\Users\Administrator\Source\Repos\PROG1180\GRASSLYLIB\GRASSLYLIB\bin\Debug\GRASSLYLIB.dll.config

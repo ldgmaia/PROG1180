@@ -37,7 +37,7 @@
                 <a class="nav-link" href="#">Repair <i class="fas fa-wrench"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Inventory <i class="fas fa-box"></i></a>
+                <a class="nav-link" href="Inventory.aspx">Inventory <i class="fas fa-box"></i></a>
             </li>
         </ul>
     </div>

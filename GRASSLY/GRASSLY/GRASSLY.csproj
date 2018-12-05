@@ -125,6 +125,7 @@
     <Content Include="Global.asax" />
     <Content Include="Includes\Footer.aspx" />
     <Content Include="Includes\Header.aspx" />
+    <Content Include="Inventory.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Management.aspx" />
@@ -201,6 +202,13 @@
     </Compile>
     <Compile Include="Includes\Header.aspx.designer.cs">
       <DependentUpon>Header.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
