@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Customer Create</title>
     <!-- #Include virtual="/Includes/Header.aspx" -->
 </head>
 <body>
@@ -16,77 +16,67 @@
             <br />
             <div>
                 <h1 class="display-3 text-center">New Customer</h1><br />
-                <table class="w-100">
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label1" runat="server" Text="First Name:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtFirst" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label2" runat="server" Text="Last Name:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtLast" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label3" runat="server" Text="Phone:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label4" runat="server" Text="Address:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label5" runat="server" Text="City:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label6" runat="server" Text="Postal Code:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtPostal" runat="server" Height="34px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label7" runat="server" Text="E-mail:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Button ID="btnCreateCust" class="btn btn-primary" runat="server" OnClick="btnCreateCust_Click" Text="Create" />
-                            <asp:Button ID="btnDeleteCust" class="btn btn-primary" runat="server" OnClick="btnDeleteCust_Click" Text="Delete" />
-                        </td>
-                        <td>
-                            <asp:Button ID="btnCancelCust" class="btn btn-primary" runat="server" Text="Cancel" OnClick="btnCancelCust_Click" />
-                        </td>
-                    </tr>
-                </table>
+            <div class="form-group row">
+                <asp:Label ID="Label1" for="txtFirst" class="col-sm-3 col-form-label" runat="server" Text="First Name:"></asp:Label>              
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtFirst" class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <asp:Label ID="Label2" runat="server" class="col-sm-3 col-form-label" Text="Last Name:"></asp:Label>                             
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtLast" class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <asp:Label ID="Label3" runat="server" class="col-sm-3 col-form-label" Text="Phone:"></asp:Label>                           
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtPhone" class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <asp:Label ID="Label4" runat="server" class="col-sm-3 col-form-label" Text="Address:"></asp:Label>                         
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtAddress"  class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                 <asp:Label ID="Label5" runat="server" class="col-sm-3 col-form-label" Text="City:"></asp:Label>                        
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtCity" class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <asp:Label ID="Label6" runat="server" class="col-sm-3 col-form-label" Text="Postal Code:"></asp:Label>                       
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtPostal" class="form-control" runat="server" Height="34px"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <asp:Label ID="Label7" runat="server" class="col-sm-3 col-form-label" Text="E-mail:"></asp:Label>                      
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtEmail" class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-1">
+                            <asp:Button ID="btnCreateCust" class="btn btn-success " runat="server" OnClick="btnCreateCust_Click" Text="Create" />
+                 </div>   
+                <div class="col-sm-1">
+                    <asp:Button ID="btnDeleteCust" class="btn btn-danger" runat="server" OnClick="btnDeleteCust_Click" Text="Delete" />
+                 </div> 
+                <div class="col-sm-1 offset-sm-6">
+                            <asp:Button ID="btnCancelCust" class="btn btn-default" runat="server" Text="Cancel" OnClick="btnCancelCust_Click" />
+                 </div>
+               
+            </div>
+
             </div>
             <br />
                             <asp:Label ID="lblCust" runat="server"></asp:Label>

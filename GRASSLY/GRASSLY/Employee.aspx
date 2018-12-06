@@ -6,6 +6,11 @@
 <head runat="server">
     <title>Employee </title>
     <!-- #Include virtual="/Includes/Header.aspx" -->
+<script>
+    $(document).ready(function () {
+        $('#GridView2').DataTable({});
+    });
+</script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -17,7 +22,7 @@
                 <h1 class="display-3 text-center">Employees</h1><br />
             </div>
             <div>
-                <asp:GridView ID="GridView1" class="table table-striped table-bordered" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsEmpCrud" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <asp:GridView ID="GridView2" class="table table-striped table-bordered" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsEmpCrud" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />

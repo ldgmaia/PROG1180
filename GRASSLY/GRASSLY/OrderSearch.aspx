@@ -87,104 +87,63 @@
             <h1 class="display-3 text-center">Search Orders</h1>
             <!-- (Use for Titles) -->
             <br />
+                <h4>Search by order...</h4><br />
+            <div class="form-group row">
+              <asp:Label ID="Label6" Class="col-sm-2 col-form-label" runat="server" Text="Order Number:"></asp:Label>
+                <div class="col-sm-1">
+                <asp:RangeValidator ID="OrderNumberValidator" runat="server" ControlToValidate="txtSearchOrder" ErrorMessage="*" ForeColor="Red" MaximumValue="10000000" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+               </div>
+                <div class="col-sm-5">                
+                        <asp:TextBox ID="txtSearchOrder" class="form-control" runat="server"></asp:TextBox>  
+                </div>                 
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-1">
+                    <asp:Button ID="btnSearchOrder" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchOrder_Click" />             
+                 </div>                
+            </div>
 
-            <table class="w-100">
-                <tr>
-                    <td class="auto-style1">
-                        <asp:Label ID="Label5" runat="server" Text="Search by order..." Font-Bold="True"></asp:Label>
-                    </td>
-                    <td class="auto-style17">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td>
-                        <asp:Label ID="Label4" runat="server" Text="Search by customer..." Font-Bold="True"></asp:Label>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style5">
-                        <asp:Label ID="Label6" runat="server" Text="Order Number:"></asp:Label>
-                    </td>
-                    <td class="auto-style18">
-                        <asp:TextBox ID="txtSearchOrder" class="form-control" runat="server"></asp:TextBox>
-                        <asp:RangeValidator ID="OrderNumberValidator" runat="server" ControlToValidate="txtSearchOrder" ErrorMessage="*" ForeColor="Red" MaximumValue="10000000" MinimumValue="1" Type="Integer"></asp:RangeValidator>
-                    </td>
-                    <td class="auto-style6">
-                        &nbsp;</td>
-                    <td class="auto-style7">
-                        <asp:Label ID="Label2" runat="server" Text="First Name:"></asp:Label>
-                    </td>
-                    <td class="auto-style7">
-                        <asp:TextBox ID="txtSearchCustFirst" class="form-control" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-                        <asp:Button ID="btnSearchOrder" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchOrder_Click" />
-                    </td>
-                    <td class="auto-style17">
-                        &nbsp;</td>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label3" runat="server" Text="Last Name:"></asp:Label>
-                    </td>
-                    <td class="auto-style2">
-                        <asp:TextBox ID="txtSearchCustLast" class="form-control" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-                        &nbsp;</td>
-                    <td class="auto-style17">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style2">
-                        <asp:Button ID="btnSearchCustomer" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchCustomer_Click" />
-                    </td>
-                    <td class="auto-style2">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-                        <asp:Label ID="Label7" runat="server" Text="Search by vendor..." Font-Bold="True"></asp:Label>
-                    </td>
-                    <td class="auto-style17">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style2">
-                        &nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style14">
-                        <asp:Label ID="Label8" runat="server" Text="Vendor List:"></asp:Label>
-                    </td>
-                    <td class="auto-style19">
+            <h4>Search by customer...</h4><br />
+
+            <div class="form-group row">
+                <asp:Label ID="Label2" Class="col-sm-3 col-form-label" runat="server" Text="First Name:"></asp:Label>
+                <div class="col-sm-5">
+                    <asp:TextBox ID="txtSearchCustFirst" class="form-control" runat="server"></asp:TextBox>
+                </div>                 
+            </div>
+            <div class="form-group row">
+                <asp:Label ID="Label3" Class="col-sm-3 col-form-label" runat="server" Text="Last Name:"></asp:Label>
+                <div class="col-sm-5">
+                     <asp:TextBox ID="txtSearchCustLast" class="form-control" runat="server"></asp:TextBox>
+                </div>                 
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-1">
+                    <asp:Button ID="btnSearchCustomer" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchCustomer_Click" />            
+                </div> 
+            </div>
+            <h4>Search by vendor...</h4><br />
+            <div class="form-group row">
+                <asp:Label ID="Label8" Class="col-sm-3 col-form-label" runat="server" Text="Vendor List:"></asp:Label>
+                <div class="col-sm-5">
                         <asp:DropDownList ID="ddlSearchVendor" class="form-control" runat="server" AppendDataBoundItems="True" DataSourceID="dsEmployeeList" DataTextField="Vendor" DataValueField="id">
                             <asp:ListItem Value="-1">Select a vendor...</asp:ListItem>
                         </asp:DropDownList>
-                    </td>
-                    <td class="auto-style15">&nbsp;</td>
-                    <td class="auto-style16"></td>
-                    <td class="auto-style16"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-                        <asp:Button ID="btnSearchVendor" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchVendor_Click" />
-                    </td>
-                    <td class="auto-style17">
-                        &nbsp;</td>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
-                </tr>
-                </table>
+                </div>                 
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-1">
+                   <asp:Button ID="btnSearchVendor" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchVendor_Click" />
+                </div> 
+            </div>
             <br />
             <table class="auto-style12">
                 <tr>
                     <td class="auto-style13">
-                        <asp:Label ID="lblListOrder" runat="server" Text="List Orders By..." Font-Bold="True"></asp:Label>
+                        <asp:Label ID="lblListOrder" runat="server" Text="List Orders By..." ></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="lblOrders" runat="server" Text="Orders..." Font-Bold="True"></asp:Label>
+                        <asp:Label ID="lblOrders" runat="server" Text="Orders..." ></asp:Label>
                     </td>
                 </tr>
                 <tr>

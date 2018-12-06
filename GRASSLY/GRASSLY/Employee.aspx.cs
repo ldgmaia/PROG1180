@@ -13,7 +13,7 @@ namespace GRASSLY
         {
             if (!User.Identity.IsAuthenticated)
                 Response.Redirect("~/LogIn.aspx");
-            GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
+            GridView2.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
 
         protected void btnCreateEmp_Click(object sender, EventArgs e)
@@ -23,7 +23,7 @@ namespace GRASSLY
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Response.Redirect("~/EmployeeCreate.aspx?selectedId=" + GridView1.SelectedValue);
+            Response.Redirect("~/EmployeeCreate.aspx?selectedId=" + GridView2.SelectedValue);
         }
     }
 }

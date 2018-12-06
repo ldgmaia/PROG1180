@@ -16,46 +16,40 @@
             <div>
                 <h1 class="display-3 text-center">New Employee</h1><br />
             </div>
-            <table class="w-100">
-                <tr>
-                    <td>
-                        <asp:Label ID="Label1" runat="server" Text="First Name:"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtFirst" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="Label2" runat="server" Text="Last Name:"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtLast" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="Label3" runat="server" Text="Position:"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:DropDownList ID="ddlPosition" runat="server" DataSourceID="dsPosCreate" DataTextField="posName" DataValueField="id">
+            <div class="form-group row">
+                <asp:Label ID="Label1" runat="server" class="col-sm-3 col-form-label" Text="First Name:"></asp:Label>
+                             
+                <div class="col-sm-6">
+                     <asp:TextBox ID="txtFirst"  class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group row">
+                <asp:Label ID="Label2" runat="server" class="col-sm-3 col-form-label" Text="Last Name:"></asp:Label>
+                             
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtLast" class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group row">
+                <asp:Label ID="Label3" runat="server" class="col-sm-3 col-form-label" Text="Position:"></asp:Label>
+                <div class="col-sm-6">
+                        <asp:DropDownList ID="ddlPosition" class="form-control" runat="server" DataSourceID="dsPosCreate" DataTextField="posName" DataValueField="id">
                         </asp:DropDownList>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Button ID="btnCreateEmp" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Create" />
-                        <asp:Button ID="btnDeleteEmp" class="btn btn-primary" runat="server" OnClick="btnDeleteEmp_Click" Text="Delete" />
-                    </td>
-                    <td>
-                        <asp:Button ID="btnCancelEmp" class="btn btn-primary" runat="server" OnClick="btnCancelEmp_Click" Text="Cancel" />
-                    </td>
-                </tr>
-            </table>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-1">
+                     <asp:Button ID="btnCreateEmp" class="btn btn-success" runat="server" OnClick="Button1_Click" Text="Create" />
+                 </div>   
+                <div class="col-sm-1">
+                     <asp:Button ID="btnDeleteEmp" class="btn btn-danger" runat="server" OnClick="btnDeleteEmp_Click" Text="Delete" />
+                 </div> 
+                <div class="col-sm-1 offset-sm-6">
+                    <asp:Button ID="btnCancelEmp" class="btn btn-default" runat="server" OnClick="btnCancelEmp_Click" Text="Cancel" />
+                 </div>
+               
+            </div>
+
             <br />
                         <asp:Label ID="lblEmp" runat="server"></asp:Label>
             <br />
