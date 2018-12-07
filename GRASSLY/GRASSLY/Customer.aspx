@@ -11,7 +11,12 @@
         $('#GridView1').DataTable({});
     });
 </script>
-
+<style>
+    #GridView1 th {
+      color: #FFFFFF;
+      background-color : #5D7B9D;
+    } 
+</style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -20,8 +25,7 @@
             <div>
                 <h1 class="display-3 text-center">Customers</h1><br />
             </div>
-            <asp:GridView ID="GridView1" class="table table-striped table-bordered dt-responsive" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsCust" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
-                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <asp:GridView ID="GridView1" class="table table-striped table-bordered dt-responsive" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsCust" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="custFirst" HeaderText="First Name" SortExpression="custFirst" />
@@ -32,16 +36,6 @@
                     <asp:BoundField DataField="custPostal" HeaderText="Postal" SortExpression="custPostal" />
                     <asp:BoundField DataField="custEmail" HeaderText="Email" SortExpression="custEmail" />
                 </Columns>
-                <EditRowStyle BackColor="#999999" />
-                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
             <br />
             &nbsp;<asp:Button ID="btnCustCreate" runat="server" class="btn btn-primary" OnClick="btnCustCreate_Click" Text="Create Customer" />
@@ -84,6 +78,7 @@
                 </UpdateParameters>
             </asp:ObjectDataSource>
         </div>
+        <br />
         <!-- #Include virtual="/Includes/Footer.aspx" -->
     </form>
 </body>
