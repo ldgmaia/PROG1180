@@ -6,76 +6,23 @@
 <head runat="server">
     <title>Customer Search</title>
     <!-- #Include virtual="/Includes/Header.aspx" -->
-
+    <style>
+    #grvOrderDetail th {
+      color: #FFFFFF;
+      background-color : #5D7B9D;
+    } 
+    #grvOrderDetail2 th {
+      color: #FFFFFF;
+      background-color : #5D7B9D;
+    } 
     <style type="text/css">
-        .auto-style1 {
-            width: 848px;
-        }
-
-        .auto-style2 {
-            width: 1079px;
-        }
-
-        .auto-style5 {
-            width: 848px;
-            height: 29px;
-        }
-        .auto-style6 {
-            width: 1017px;
-            height: 29px;
-        }
-        .auto-style7 {
-            height: 29px;
-        }
-        .auto-style8 {
-            width: 1017px;
-        }
-        .auto-style9 {
-            width: 848px;
-            height: 26px;
-        }
-        .auto-style10 {
-            width: 1017px;
-            height: 26px;
-        }
-        .auto-style11 {
-            width: 1079px;
-            height: 26px;
-        }
         .auto-style12 {
             width: 100%;
         }
         .auto-style13 {
-            width: 650px;
+            width: 721px;
         }
-        .auto-style14 {
-            width: 848px;
-            height: 27px;
-        }
-        .auto-style15 {
-            width: 1017px;
-            height: 27px;
-        }
-        .auto-style16 {
-            width: 1079px;
-            height: 27px;
-        }
-        .auto-style17 {
-            width: 630px;
-        }
-        .auto-style18 {
-            width: 630px;
-            height: 29px;
-        }
-        .auto-style19 {
-            width: 630px;
-            height: 27px;
-        }
-        .auto-style20 {
-            width: 630px;
-            height: 26px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -87,24 +34,41 @@
             <h1 class="display-3 text-center">Search Orders</h1>
             <!-- (Use for Titles) -->
             <br />
-                <h4>Search by order...</h4><br />
+
+
+     <div class="form-horizontal">
+        <button class="btn" type="button" data-toggle="collapse" id="filterToggle" data-target="#collapseFilter" aria-expanded="true" aria-controls="collapseFilter">
+            Search by order...
+        </button>
+         <button class="btn" type="button" data-toggle="collapse" id="filterToggle2" data-target="#collapseFilter2" aria-expanded="false" aria-controls="collapseFilter2">
+            Search by Customer...
+         </button>
+          <button class="btn" type="button" data-toggle="collapse" id="filterToggle3" data-target="#collapseFilter3" aria-expanded="false" aria-controls="collapseFilter3">
+            Search by sales...
+        </button>
+      </div><br />
+
+ <div class="form-horizontal">
+        <div class="<%=Session["OrderSearchClass"] %>" id="collapseFilter">
             <div class="form-group row">
-              <asp:Label ID="Label6" Class="col-sm-2 col-form-label" runat="server" Text="Order Number:"></asp:Label>
-                <div class="col-sm-1">
-                <asp:RangeValidator ID="OrderNumberValidator" runat="server" ControlToValidate="txtSearchOrder" ErrorMessage="*" ForeColor="Red" MaximumValue="10000000" MinimumValue="1" Type="Integer"></asp:RangeValidator>
-               </div>
+              <asp:Label ID="Label1" Class="col-sm-3 col-form-label" runat="server" Text="Order Number:"></asp:Label>
                 <div class="col-sm-5">                
                         <asp:TextBox ID="txtSearchOrder" class="form-control" runat="server"></asp:TextBox>  
-                </div>                 
+                </div>
+                <div class="col-sm-5">
+                    <asp:Label ID="lblOrderError" runat="server" ForeColor="Red"></asp:Label>
+                </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-1">
-                    <asp:Button ID="btnSearchOrder" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchOrder_Click" />             
+                    <asp:Button ID="Button1" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchOrder_Click" />             
                  </div>                
             </div>
-
-            <h4>Search by customer...</h4><br />
-
+            </div>
+     </div>
+            <div class="form-horizontal">
+        
+        <div class="<%=Session["CustomerSearchClass"] %>" id="collapseFilter2">
             <div class="form-group row">
                 <asp:Label ID="Label2" Class="col-sm-3 col-form-label" runat="server" Text="First Name:"></asp:Label>
                 <div class="col-sm-5">
@@ -122,12 +86,17 @@
                     <asp:Button ID="btnSearchCustomer" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchCustomer_Click" />            
                 </div> 
             </div>
-            <h4>Search by vendor...</h4><br />
+        </div>
+
+       </div>
+
+            <div class="form-horizontal">
+        <div class="<%=Session["VendorSearchClass"] %>" id="collapseFilter3">
             <div class="form-group row">
                 <asp:Label ID="Label8" Class="col-sm-3 col-form-label" runat="server" Text="Vendor List:"></asp:Label>
                 <div class="col-sm-5">
                         <asp:DropDownList ID="ddlSearchVendor" class="form-control" runat="server" AppendDataBoundItems="True" DataSourceID="dsEmployeeList" DataTextField="Vendor" DataValueField="id">
-                            <asp:ListItem Value="-1">Select a vendor...</asp:ListItem>
+                            <asp:ListItem Value="-1">Select a sales...</asp:ListItem>
                         </asp:DropDownList>
                 </div>                 
             </div>
@@ -136,39 +105,41 @@
                    <asp:Button ID="btnSearchVendor" class="btn btn-primary" UseSubmitBehavior="false" runat="server" Text="Search" OnClick="btnSearchVendor_Click" />
                 </div> 
             </div>
+        </div>
+
+       </div>
             <br />
             <table class="auto-style12">
                 <tr>
                     <td class="auto-style13">
-                        <asp:Label ID="lblListOrder" runat="server" Text="List Orders By..." ></asp:Label>
+                        <asp:Label ID="lblListOrder" runat="server" Text="Choose a customer..." ></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="lblOrders" runat="server" Text="Orders..." ></asp:Label>
+                        <asp:Label ID="lblOrders" runat="server" Text="Choose an Order..." ></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style13">
-            <asp:ListBox ID="lstSearchResult" class="form-control col-sm-9" runat="server" Width="600px" AutoPostBack="True" OnSelectedIndexChanged="lstSearchResult_SelectedIndexChanged"></asp:ListBox>
+            <asp:ListBox ID="lstSearchResult" class="form-control col-sm-11" runat="server" Width="713px" AutoPostBack="True" OnSelectedIndexChanged="lstSearchResult_SelectedIndexChanged"></asp:ListBox>
                     </td>
                     <td>
-            <asp:ListBox ID="lstOrders" class="form-control col-sm-9" runat="server" Width="505px" AutoPostBack="True" OnSelectedIndexChanged="lstOrders_SelectedIndexChanged"></asp:ListBox>
+            <asp:ListBox ID="lstOrders" class="form-control col-sm-9" runat="server" Width="434px" AutoPostBack="True" OnSelectedIndexChanged="lstOrders_SelectedIndexChanged"></asp:ListBox>
                     </td>
                 </tr>
             </table>
             <br />
                         <asp:Label ID="lblDetails"  runat="server" Text="Order Detail..." Font-Bold="True"></asp:Label>
-                    <asp:GridView ID="grvOrderDetail"  class="table table-striped table-bordered" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataSourceID="dsSearchOrder" Width="1199px" DataKeyNames="id">
+                    <asp:GridView ID="grvOrderDetail"  class="table table-striped table-bordered dt-responsive" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataSourceID="dsSearchOrder" Width="1199px" DataKeyNames="id">
                         <Columns>
                             <asp:BoundField DataField="CustomerFull" HeaderText="Customer" SortExpression="CustomerFull" ReadOnly="True" />
                             <asp:BoundField DataField="EmployeeFull" HeaderText="Vendor" ReadOnly="True" SortExpression="EmployeeFull" />
                             <asp:CheckBoxField DataField="ordPaid" HeaderText="Paid?" SortExpression="ordPaid" />
-                            <asp:BoundField DataField="serordDateIn" HeaderText="Date In" SortExpression="serordDateIn" />
-                            <asp:BoundField DataField="serordDateOut" HeaderText="Date Out" SortExpression="serordDateOut" />
+                            <asp:BoundField DataField="serordDateIn" HeaderText="Date In" SortExpression="serordDateIn" DataFormatString="{0:d}" />
+                            <asp:BoundField DataField="serordDateOut" HeaderText="Date Out" SortExpression="serordDateOut" DataFormatString="{0:d}" />
                             <asp:BoundField DataField="serordIssue" HeaderText="Issue" SortExpression="serordIssue" />
                             <asp:CheckBoxField DataField="serordWarranty" HeaderText="Warranty?" SortExpression="serordWarranty" />
                             <asp:BoundField DataField="equModel" HeaderText="Eq. Model" SortExpression="equModel" />
                             <asp:BoundField DataField="eqtType" HeaderText="Eq. Type" SortExpression="eqtType" />
-                            <asp:BoundField DataField="equSerial" HeaderText="Eq. Serial" SortExpression="equSerial" />
                         </Columns>
             </asp:GridView>
             <asp:GridView ID="grvOrderDetail2" class="table table-striped table-bordered" Style="width: 100%" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsSearchOrder2" Width="1198px">
@@ -176,13 +147,12 @@
                     <asp:BoundField DataField="CustomerFull" HeaderText="Customer" ReadOnly="True" SortExpression="CustomerFull" />
                     <asp:BoundField DataField="EmployeeFull" HeaderText="Vendor" ReadOnly="True" SortExpression="EmployeeFull" />
                     <asp:CheckBoxField DataField="ordPaid" HeaderText="Paid?" SortExpression="ordPaid" />
-                    <asp:BoundField DataField="serordDateIn" HeaderText="Date In" SortExpression="serordDateIn" />
-                    <asp:BoundField DataField="serordDateOut" HeaderText="Date Out" SortExpression="serordDateOut" />
+                    <asp:BoundField DataField="serordDateIn" HeaderText="Date In" SortExpression="serordDateIn" DataFormatString="{0:d}" />
+                    <asp:BoundField DataField="serordDateOut" HeaderText="Date Out" SortExpression="serordDateOut" DataFormatString="{0:d}" />
                     <asp:BoundField DataField="serordIssue" HeaderText="Issue" SortExpression="serordIssue" />
                     <asp:CheckBoxField DataField="serordWarranty" HeaderText="Warranty?" SortExpression="serordWarranty" />
                     <asp:BoundField DataField="equModel" HeaderText="Eq. Model" SortExpression="equModel" />
                     <asp:BoundField DataField="eqtType" HeaderText="Eq. Type" SortExpression="eqtType" />
-                    <asp:BoundField DataField="equSerial" HeaderText="Eq. Serial" SortExpression="equSerial" />
                 </Columns>
             </asp:GridView>
             <br />

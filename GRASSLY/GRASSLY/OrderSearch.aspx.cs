@@ -37,22 +37,39 @@ namespace GRASSLY
             if (!User.Identity.IsAuthenticated)
                 Response.Redirect("~/LogIn.aspx");
 
-            this.lstSearchResult.Visible = false;
-            this.lstOrders.Visible = false;
-            this.lblListOrder.Visible = false;
-            this.lblOrders.Visible = false;
+            //this.lblListOrder.Visible = false;
+            //this.lstSearchResult.Visible = false;
+            //this.lblOrders.Visible = false;
+            //this.lstOrders.Visible = false;
+
+            this.lblOrderError.Text = "";
             this.lblDetails.Visible = false;
             this.grvOrderDetail.Visible = false;
             this.grvOrderDetail2.Visible = false;
+            Session["OrderSearchClass"] = "collapse";
+            Session["CustomerSearchClass"] = "collapse";
+            Session["VendorSearchClass"] = "collapse";
 
         }
 
         protected void btnSearchOrder_Click(object sender, EventArgs e)
         {
             this.Clear("order");
-            int order = Convert.ToInt32(txtSearchOrder.Text);
-            grvOrderDetail.DataBind();
-            grvOrderDetail.Visible = true;
+            try
+            {
+                int order = Convert.ToInt32(this.txtSearchOrder.Text);
+                grvOrderDetail.DataBind();
+                grvOrderDetail.Visible = true;
+            }
+            catch
+            {
+                this.lblOrderError.Text = "You have to use a number!";
+            }
+            
+            // Response.Redirect("~/OrderSearch.aspx?OrderSearchClass=in&CustomerSearchClass=collapse&VendorSearchClass=collapse");
+            Session["OrderSearchClass"] = "in";
+            Session["CustomerSearchClass"] = "collapse";
+            Session["VendorSearchClass"] = "collapse";
         }
        
         protected void btnSearchCustomer_Click(object sender, EventArgs e)
@@ -67,11 +84,14 @@ namespace GRASSLY
                 foreach (DataRow r in rows)
                 {
                     ListItem item = new ListItem();
-                    item.Text = "Customer Name: " + r.ItemArray[1].ToString() + " " + r.ItemArray[2].ToString() + " - Phone: " + r.ItemArray[3].ToString() + " - e-mail: " + r.ItemArray[7].ToString();
+                    item.Text = "Name: " + r.ItemArray[1].ToString() + " " + r.ItemArray[2].ToString() + " - Phone: " + r.ItemArray[3].ToString() + " - e-mail: " + r.ItemArray[7].ToString();
                     item.Value = r.ItemArray[0].ToString();
                     this.lstSearchResult.Items.Add(item);
                 }
             }
+            Session["OrderSearchClass"] = "collapse";
+            Session["CustomerSearchClass"] = "in";
+            Session["VendorSearchClass"] = "collapse";
         }
 
         protected void lstSearchResult_SelectedIndexChanged(object sender, EventArgs e)
@@ -88,6 +108,9 @@ namespace GRASSLY
                 item.Value = r.ItemArray[0].ToString();
                 this.lstOrders.Items.Add(item);
             }
+            Session["OrderSearchClass"] = "collapse";
+            Session["CustomerSearchClass"] = "in";
+            Session["VendorSearchClass"] = "collapse";
         }
 
         protected void lstOrders_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,6 +118,19 @@ namespace GRASSLY
             this.Clear("orderdet");
             grvOrderDetail2.DataBind();
             grvOrderDetail2.Visible = true;
+            Session["OrderSearchClass"] = "collapse";
+            if (this.lstSearchResult.Items.Count > 0)
+            {
+                Session["CustomerSearchClass"] = "in";
+                Session["VendorSearchClass"] = "collapse";
+            }
+            else
+            {
+                Session["CustomerSearchClass"] = "collapse";
+                Session["VendorSearchClass"] = "in";
+            }
+                
+            
         }
 
         protected void btnSearchVendor_Click(object sender, EventArgs e)
@@ -111,6 +147,9 @@ namespace GRASSLY
                 item.Value = r.ItemArray[0].ToString();
                 this.lstOrders.Items.Add(item);
             }
+            Session["OrderSearchClass"] = "collapse";
+            Session["CustomerSearchClass"] = "collapse";
+            Session["VendorSearchClass"] = "in";
         }
 
         private void Clear(string formName)
@@ -121,10 +160,10 @@ namespace GRASSLY
                 this.txtSearchCustLast.Text = "";
                 this.lstSearchResult.Items.Clear();
                 this.lstOrders.Items.Clear();
-                this.lstSearchResult.Visible = false;
-                this.lstOrders.Visible = false;
-                this.lblListOrder.Visible = false;
-                this.lblOrders.Visible = false;
+                //this.lstSearchResult.Visible = false;
+                //this.lstOrders.Visible = false;
+                //this.lblListOrder.Visible = false;
+                //this.lblOrders.Visible = false;
                 this.lblDetails.Visible = false;
                 this.grvOrderDetail.Visible = false;
                 this.grvOrderDetail2.Visible = false;
@@ -135,10 +174,10 @@ namespace GRASSLY
                 this.txtSearchOrder.Text = "";
                 this.lstSearchResult.Items.Clear();
                 this.lstOrders.Items.Clear();
-                this.lstSearchResult.Visible = true;
-                this.lstOrders.Visible = false;
-                this.lblListOrder.Visible = true;
-                this.lblOrders.Visible = false;
+                //this.lstSearchResult.Visible = true;
+                //this.lstOrders.Visible = false;
+                //this.lblListOrder.Visible = true;
+                //this.lblOrders.Visible = false;
                 this.lblDetails.Visible = false;
                 this.grvOrderDetail.Visible = false;
                 this.grvOrderDetail2.Visible = false;
@@ -148,10 +187,10 @@ namespace GRASSLY
             if (formName == "lstsearch")
             {
                 this.lstOrders.Items.Clear();
-                this.lstSearchResult.Visible = true;
-                this.lstOrders.Visible = true;
-                this.lblListOrder.Visible = true;
-                this.lblOrders.Visible = true;
+                //this.lstSearchResult.Visible = true;
+                //this.lstOrders.Visible = true;
+                //this.lblListOrder.Visible = true;
+                //this.lblOrders.Visible = true;
                 this.lblDetails.Visible = false;
                 this.grvOrderDetail.Visible = false;
                 this.grvOrderDetail2.Visible = false;
@@ -161,10 +200,11 @@ namespace GRASSLY
             if (formName == "vendor")
             {
                 this.lstOrders.Items.Clear();
-                this.lstSearchResult.Visible = false;
-                this.lstOrders.Visible = true;
-                this.lblListOrder.Visible = false;
-                this.lblOrders.Visible = true;
+                //this.lstSearchResult.Visible = false;
+                //this.lstOrders.Visible = true;
+                //this.lblListOrder.Visible = false;
+                //this.lblOrders.Visible = true;
+                this.lstSearchResult.Items.Clear();
                 this.lblDetails.Visible = false;
                 this.grvOrderDetail.Visible = false;
                 this.grvOrderDetail2.Visible = false;
@@ -172,20 +212,20 @@ namespace GRASSLY
             }
             if (formName == "orderdet")
             {
-                this.lstOrders.Visible = true;
-                this.lblOrders.Visible = true;
+                //this.lstOrders.Visible = true;
+                //this.lblOrders.Visible = true;
                 this.lblDetails.Visible = true;
                 this.grvOrderDetail.Visible = false;
                 this.grvOrderDetail2.Visible = true;
                 if (vendor == true)
                 {
-                    this.lstSearchResult.Visible = false;
-                    this.lblListOrder.Visible = false;
+                    //this.lstSearchResult.Visible = false;
+                    //this.lblListOrder.Visible = false;
                 }
                 else
                 {
-                    this.lstSearchResult.Visible = true;
-                    this.lblListOrder.Visible = true;
+                    //this.lstSearchResult.Visible = true;
+                    //this.lblListOrder.Visible = true;
                 }
                 
             }
