@@ -35,6 +35,7 @@ namespace GRASSLY
                 txtFirst.Text = row[0]["empFirst"].ToString();
                 txtLast.Text = row[0]["empLast"].ToString();
                 ddlPosition.SelectedValue = row[0]["posID"].ToString();
+                btnDeleteEmp.Visible = true;
                 btnCreateEmp.Text = "Update";
             }
             else

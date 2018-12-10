@@ -42,7 +42,7 @@
                      <asp:Button ID="btnCreateEmp" class="btn btn-success" runat="server" OnClick="Button1_Click" Text="Create" />
                  </div>   
                 <div class="col-sm-1">
-                     <asp:Button ID="btnDeleteEmp" class="btn btn-danger" runat="server" OnClick="btnDeleteEmp_Click" Text="Delete" />
+                     <asp:Button ID="btnDeleteEmp" class="btn btn-danger" runat="server" OnClick="btnDeleteEmp_Click" Text="Delete" Visible="False" />
                  </div> 
                 <div class="col-sm-1 offset-sm-6">
                     <asp:Button ID="btnCancelEmp" class="btn btn-default" runat="server" OnClick="btnCancelEmp_Click" Text="Cancel" />

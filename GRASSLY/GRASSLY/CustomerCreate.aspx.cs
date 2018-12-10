@@ -39,6 +39,7 @@ namespace GRASSLY
                 txtAddress.Text = row[0]["custAddress"].ToString();
                 txtCity.Text = row[0]["custCity"].ToString();
                 txtPostal.Text = row[0]["custPostal"].ToString();
+                btnDeleteCust.Visible = true;
                 btnCreateCust.Text = "Update";
             }
             else
