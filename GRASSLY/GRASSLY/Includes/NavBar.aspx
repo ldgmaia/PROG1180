@@ -29,7 +29,7 @@
                     <a class="dropdown-item disabled">Reports <i class="fas fa-book"></i></a>
                     <a class="dropdown-item" href="#"></a>
                     <a class="dropdown-item" href="/Reports/ReportAnnual.aspx">Yearly (0.02%) Report</a>
-                    <a class="dropdown-item" href="/Reports/ReportWeekly.aspx">Weekly Report</a>
+                    <a class="dropdown-item" href="/Reports/ReportWeekly.aspx">General Report</a>
                     <a class="dropdown-item" href="/Reports/ReportWarranty.aspx">Warranty Report</a>
                 </div>
             </li>

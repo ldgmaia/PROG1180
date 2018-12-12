@@ -15,26 +15,28 @@
         </div>
         <div class="container">
             
-            <label for="iniDate">Start date:</label>
+            <label for="iniDate">
+            <br />
+            Start date:</label>
             <asp:TextBox id="iniDate" runat="server" name="iniDate" TextMode="Date" value="2017-01-01" min="2015-01-01" />
             <label for="endDate">End date:</label>
             <asp:TextBox id="endDate" runat="server" name="endDate" TextMode="Date" value="2018-12-31" min="2015-01-02" />
-            <asp:Button ID="Button1" runat="server" OnClick="GridView1_SelectedIndexChanged" Text="Button" />
+            <asp:Button ID="Button1" runat="server" Text="Filter" />
             <br />
             <br />
-            <asp:GridView ID="GridView1" class="table table-striped table-bordered dt-responsive" runat="server" AutoGenerateColumns="False" DataKeyNames="Receipt" DataSourceID="ObjectDataSource1">
+            <asp:GridView ID="GridView1" class="table table-striped table-bordered dt-responsive" runat="server" AutoGenerateColumns="False" DataKeyNames="Receipt" DataSourceID="dsWarranty">
                 <Columns>
                     <asp:BoundField DataField="Receipt" HeaderText="Receipt" InsertVisible="False" ReadOnly="True" SortExpression="Receipt" />
-                    <asp:BoundField DataField="Date In" HeaderText="Date In" SortExpression="Date In" />
-                    <asp:BoundField DataField="Date Out" HeaderText="Date Out" SortExpression="Date Out" />
-                    <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" SortExpression="Name" />
+                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" ReadOnly="True" />
                     <asp:BoundField DataField="Service Price" HeaderText="Service Price" SortExpression="Service Price" />
                     <asp:BoundField DataField="Equ Type" HeaderText="Equ Type" SortExpression="Equ Type" />
                     <asp:BoundField DataField="Equ Model" HeaderText="Equ Model" SortExpression="Equ Model" />
-                    <asp:BoundField DataField="Order Date" HeaderText="Order Date" ReadOnly="True" SortExpression="Order Date" />
+                    <asp:BoundField DataField="Order Date" HeaderText="Order Date" SortExpression="Order Date" ReadOnly="True" />
+                    <asp:BoundField DataField="Date In" HeaderText="Date In" SortExpression="Date In" ReadOnly="True" />
+                    <asp:BoundField DataField="Date Out" HeaderText="Date Out" ReadOnly="True" SortExpression="Date Out" />
                 </Columns>
             </asp:GridView>
-            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.ReportWarrantyTableAdapter">
+            <asp:ObjectDataSource ID="dsWarranty" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.ReportWarrantyTableAdapter">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="iniDate" DefaultValue="2017-01-01" Name="iniDate" PropertyName="Text" Type="String" />
                     <asp:ControlParameter ControlID="endDate" DefaultValue="2018-12-31" Name="endDate" PropertyName="Text" Type="String" />
