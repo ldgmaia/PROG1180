@@ -36,7 +36,7 @@ namespace GRASSLY
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.txtDate.Text = DateTime.Today.ToShortDateString();
+
         }
 
         protected void btnCustSearch_Click(object sender, EventArgs e)

@@ -45,9 +45,11 @@
             </div>
 
             <div class="form-group row">
-                <asp:Label ID="Label4" runat="server"  class="col-sm-3 col-form-label" Text="Date:"></asp:Label>                  
+                <asp:Label ID="Label4" runat="server"  class="col-sm-3 col-form-label" Text="Payment Method:"></asp:Label>                  
                 <div class="col-sm-5">
-                    <asp:TextBox ID="txtDate" class="form-control" type="date" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="dsPaymentType" DataTextField="payType" DataValueField="id">
+                        <asp:ListItem Value="0">Choose Payment Method</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
             </div>
 
@@ -94,6 +96,7 @@
 
                 <br />
                 <asp:ObjectDataSource ID="dsEmpList" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.EmployeeListTableAdapter"></asp:ObjectDataSource>
+                <asp:ObjectDataSource ID="dsPaymentType" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.paymentTableAdapter"></asp:ObjectDataSource>
                 <br />
             </div>
             
