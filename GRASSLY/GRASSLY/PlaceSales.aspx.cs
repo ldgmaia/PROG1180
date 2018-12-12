@@ -36,7 +36,8 @@ namespace GRASSLY
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!User.Identity.IsAuthenticated)
+                Response.Redirect("~/LogIn.aspx");
         }
 
         protected void btnCustSearch_Click(object sender, EventArgs e)
@@ -100,6 +101,11 @@ namespace GRASSLY
                 lstProduct.Items.Clear();
 
 
+        }
+
+        protected void btnSale_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/SalesDetail.aspx");
         }
     }
 }

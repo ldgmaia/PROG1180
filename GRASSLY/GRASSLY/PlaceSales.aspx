@@ -44,15 +44,6 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <asp:Label ID="Label4" runat="server"  class="col-sm-3 col-form-label" Text="Payment Method:"></asp:Label>                  
-                <div class="col-sm-5">
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="dsPaymentType" DataTextField="payType" DataValueField="id">
-                        <asp:ListItem Value="0">Choose Payment Method</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-            </div>
-
             <h4>Search inventory...</h4><br />
 
             <div class="form-group row">
@@ -88,9 +79,18 @@
                     <asp:ListBox ID="lstCart" class="form-control" runat="server" Rows="3"></asp:ListBox>
                 </div>
             </div>
+
+                <div class="form-group row">
+                <asp:Label ID="Label4" runat="server"  class="col-sm-3 col-form-label" Text="Payment Method:"></asp:Label>                  
+                <div class="col-sm-5">
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="dsPaymentType" DataTextField="payType" DataValueField="id" AppendDataBoundItems="True">
+                        <asp:ListItem Value="0">Choose Payment Method</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+            </div>
             <div class="form-group row">
                 <div class="col-sm-1">
-                     <asp:Button ID="btnSale" runat="server" class="btn btn-primary" Text="Place a Sale" />
+                     <asp:Button ID="btnSale" runat="server" class="btn btn-primary" Text="Place a Sale" OnClick="btnSale_Click" />
                  </div>                
             </div>
 
