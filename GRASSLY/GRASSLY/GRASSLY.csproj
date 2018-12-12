@@ -132,11 +132,14 @@
     <Content Include="Includes\NavBar.aspx" />
     <Content Include="OrderSearch.aspx" />
     <Content Include="PlaceOrder.aspx" />
+    <Content Include="PlaceRepair.aspx" />
     <Content Include="PlaceSales.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="RepairDetails.aspx" />
     <Content Include="Reports\ReportAnnual.aspx" />
     <Content Include="Reports\ReportWarranty.aspx" />
     <Content Include="Reports\ReportWeekly.aspx" />
+    <Content Include="SalesDetail.aspx" />
     <Content Include="StickyFooter.css" />
     <Content Include="login.css" />
     <Content Include="test.aspx" />
@@ -252,6 +255,13 @@
     <Compile Include="PlaceOrder.aspx.designer.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PlaceRepair.aspx.cs">
+      <DependentUpon>PlaceRepair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlaceRepair.aspx.designer.cs">
+      <DependentUpon>PlaceRepair.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PlaceSales.aspx.cs">
       <DependentUpon>PlaceSales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -266,6 +276,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairDetails.aspx.cs">
+      <DependentUpon>RepairDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairDetails.aspx.designer.cs">
+      <DependentUpon>RepairDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportAnnual.aspx.cs">
       <DependentUpon>ReportAnnual.aspx</DependentUpon>
@@ -287,6 +304,13 @@
     </Compile>
     <Compile Include="Reports\ReportWeekly.aspx.designer.cs">
       <DependentUpon>ReportWeekly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesDetail.aspx.cs">
+      <DependentUpon>SalesDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesDetail.aspx.designer.cs">
+      <DependentUpon>SalesDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="test.aspx.cs">

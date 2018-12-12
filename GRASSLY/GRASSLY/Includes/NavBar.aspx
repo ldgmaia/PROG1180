@@ -14,30 +14,32 @@
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Sales <i class="fas fa-shopping-cart"></i>
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/Customer.aspx">Customer</a>
-                    <a class="dropdown-item" href="/PlaceSales.aspx">Place Sales</a>
-                    <a class="dropdown-item" href="#">Repair Request</a>
-                    <a class="dropdown-item" href="/OrderSearch.aspx">Search Order</a>
+                    <a class="dropdown-item" href="/Customer.aspx?User=testuser">Customer</a>
+                    <a class="dropdown-item" href="/PlaceSales.aspx?User=testuser">Place Sales</a>
+                    <a class="dropdown-item" href="/OrderSearch.aspx?User=testuser">Search Order</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Management <i class="fas fa-tasks"></i>
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/Employee.aspx">Staff</a>
+                    <a class="dropdown-item" href="/Employee.aspx?User=testuser">Staff</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item disabled">Reports <i class="fas fa-book"></i></a>
                     <a class="dropdown-item" href="#"></a>
-                    <a class="dropdown-item" href="/Reports/ReportAnnual.aspx">Yearly (0.02%) Report</a>
-                    <a class="dropdown-item" href="/Reports/ReportWeekly.aspx">General Report</a>
-                    <a class="dropdown-item" href="/Reports/ReportWarranty.aspx">Warranty Report</a>
+                    <a class="dropdown-item" href="/Reports/ReportAnnual.aspx?User=testuser">Yearly (0.02%) Report</a>
+                    <a class="dropdown-item" href="/Reports/ReportWeekly.aspx?User=testuser">General Report</a>
+                    <a class="dropdown-item" href="/Reports/ReportWarranty.aspx?User=testuser">Warranty Report</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" >Repair <i class="fas fa-tasks"></i></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/PlaceRepair.aspx?User=testuser">Repair Request</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Repair <i class="fas fa-wrench"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Inventory.aspx">Inventory <i class="fas fa-box"></i></a>
+                <a class="nav-link" href="/Inventory.aspx?User=testuser">Inventory <i class="fas fa-box"></i></a>
             </li>
         </ul>
     </div>
