@@ -14,25 +14,27 @@
             <!-- #Include virtual="/Includes/NavBar.aspx" -->
         </div>
         <div class="container">
-            <br />
+            <div>
+                <h1 class="display-3 text-center">Yearly Report</h1><br />
+            </div>
             <asp:TextBox ID="TextBox1" runat="server">2018</asp:TextBox>
-            &nbsp;<asp:Button ID="Button1" runat="server" Text="Filter" />
+            &nbsp;<asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Filter" />
             <br />
             <br />
             Products<br />
             <asp:GridView ID="GridView2" class="table table-striped table-bordered dt-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="odsReportYearlyProd">
                 <Columns>
                     <asp:BoundField DataField="Year" HeaderText="Year" ReadOnly="True" SortExpression="Year" />
-                    <asp:BoundField DataField="Grand Total" HeaderText="Grand Total" ReadOnly="True" SortExpression="Grand Total" />
-                    <asp:BoundField DataField="Yearly Appreciation Products" HeaderText="Yearly Appreciation Products" ReadOnly="True" SortExpression="Yearly Appreciation Products" />
+                    <asp:BoundField DataField="Grand Total" HeaderText="Grand Total" ReadOnly="True" SortExpression="Grand Total" DataFormatString="{0:C}" />
+                    <asp:BoundField DataField="Yearly Appreciation Products" HeaderText="Yearly Appreciation Products" ReadOnly="True" SortExpression="Yearly Appreciation Products" DataFormatString="{0:C}" />
                 </Columns>
             </asp:GridView>
             <br />
             Services<asp:GridView ID="GridView3" class="table table-striped table-bordered dt-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="odsReportYearlyServ">
                 <Columns>
                     <asp:BoundField DataField="Year" HeaderText="Year" ReadOnly="True" SortExpression="Year" />
-                    <asp:BoundField DataField="Grand Total" HeaderText="Grand Total" ReadOnly="True" SortExpression="Grand Total" />
-                    <asp:BoundField DataField="Yearly Appreciation Services" HeaderText="Yearly Appreciation Services" ReadOnly="True" SortExpression="Yearly Appreciation Services" />
+                    <asp:BoundField DataField="Grand Total" HeaderText="Grand Total" ReadOnly="True" SortExpression="Grand Total" DataFormatString="{0:C}" />
+                    <asp:BoundField DataField="Yearly Appreciation Services" HeaderText="Yearly Appreciation Services" ReadOnly="True" SortExpression="Yearly Appreciation Services" DataFormatString="{0:C}" />
                 </Columns>
             </asp:GridView>
             <asp:ObjectDataSource ID="odsReportYearlyProd" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="GRASSLYLIB.EmmasDataSetTableAdapters.ReportAnnualProductTableAdapter">

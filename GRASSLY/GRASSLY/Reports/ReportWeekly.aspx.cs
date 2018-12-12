@@ -13,5 +13,13 @@ namespace GRASSLY
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            lblProdBuyer.Visible = true;
+            lblProdSeller.Visible = true;
+            lblServBuyer.Visible = true;
+            lblServSeller.Visible = true;
+        }
     }
 }
