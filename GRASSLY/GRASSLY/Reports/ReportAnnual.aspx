@@ -17,7 +17,7 @@
             <div>
                 <h1 class="display-3 text-center">Yearly Report</h1><br />
             </div>
-            <asp:TextBox ID="TextBox1" runat="server">2018</asp:TextBox>
+            <asp:TextBox ID="TextBox1" class="form-control col-sm-2" runat="server">2018</asp:TextBox><br />
             &nbsp;<asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Filter" />
             <br />
             <br />

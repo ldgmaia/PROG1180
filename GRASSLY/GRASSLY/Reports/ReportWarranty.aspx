@@ -15,14 +15,25 @@
         </div>
         <div class="container">
             <div>
-                <h1 class="display-3 text-center">Warranty Report</h1><br />
+                <h1 class="display-2 text-center">Warranty Report</h1><br />
             </div>
-            <label for="iniDate">
-            <br />
-            Start date:</label>
-            <asp:TextBox id="iniDate" runat="server" name="iniDate" TextMode="Date" value="2017-01-01" min="2015-01-01" />
-            <label for="endDate">End date:</label>
-            <asp:TextBox id="endDate" runat="server" name="endDate" TextMode="Date" value="2018-12-31" min="2015-01-02" />
+            <div class="form-group row">
+                <label for="iniDate" class="col-sm-2 col-form-label">Start date:</label>
+             
+                <div class="col-sm-4">
+                    <asp:TextBox id="iniDate" class="form-control" runat="server" name="iniDate" TextMode="Date" value="2017-01-01" min="2015-01-01" />
+                </div>
+                <label for="endDate" class="col-sm-2 col-form-label">End date:</label>
+  
+             
+                <div class="col-sm-4">
+                    <asp:TextBox id="endDate" class="form-control" runat="server" name="endDate" TextMode="Date" value="2018-12-31" min="2015-01-02" />
+                </div>
+            </div>
+
+            
+            
+            
             <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Filter" />
             <br />
             <br />

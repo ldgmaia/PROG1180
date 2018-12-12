@@ -58,15 +58,6 @@ namespace GRASSLY {
         protected global::System.Web.UI.WebControls.Label lblProdSeller;
         
         /// <summary>
-        /// gvTopProducts control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvTopProducts;
-        
-        /// <summary>
         /// lblProdBuyer control.
         /// </summary>
         /// <remarks>
@@ -74,6 +65,15 @@ namespace GRASSLY {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblProdBuyer;
+        
+        /// <summary>
+        /// gvTopProducts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvTopProducts;
         
         /// <summary>
         /// GridView1 control.
@@ -94,15 +94,6 @@ namespace GRASSLY {
         protected global::System.Web.UI.WebControls.Label lblServSeller;
         
         /// <summary>
-        /// dbTopService control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dbTopService;
-        
-        /// <summary>
         /// lblServBuyer control.
         /// </summary>
         /// <remarks>
@@ -110,6 +101,15 @@ namespace GRASSLY {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblServBuyer;
+        
+        /// <summary>
+        /// dbTopService control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dbTopService;
         
         /// <summary>
         /// GridView2 control.
