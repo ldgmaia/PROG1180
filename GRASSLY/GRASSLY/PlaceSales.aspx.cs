@@ -105,7 +105,7 @@ namespace GRASSLY
 
         protected void btnSale_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/SalesDetail.aspx");
+            Response.Redirect("~/SalesDetail.aspx?User=testuser");
         }
     }
 }
