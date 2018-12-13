@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Customer.aspx.cs" Inherits="GRASSLY.Customer" %>
 
 <!DOCTYPE html>
-
+<%--Coded by Mike Doerr--%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Customer</title>

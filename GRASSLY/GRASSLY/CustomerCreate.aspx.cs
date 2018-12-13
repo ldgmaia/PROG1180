@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using GRASSLYLIB;
-
+//Coded By Mike Doerr
 namespace GRASSLY
 {
     public partial class CustomerCreate : System.Web.UI.Page
